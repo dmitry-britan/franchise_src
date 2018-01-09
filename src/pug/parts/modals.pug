@@ -1,3 +1,47 @@
 div(style='display: none;')
-	#callback.box-modal
-		.box-modal_close.arcticmodal-close 
+	#registration.popup
+		.popup__close.arcticmodal-close
+		.popup__inner
+			h4.popup__header Быстрая регистрация
+			.popup__body
+				.form
+					.form__field.is--required
+						label.label Ваше имя
+						input(type="text").input
+					.form__field.is--required
+						label.label Ваш e-mail
+						input(type="email").input
+					.form__field
+						label.label Ваш телефон
+						input(type="text").input
+					.form__field
+						label.label Откуда вы?
+						input(type="text").input
+					.form__field
+						| Я — продавец франшизы (франчайзер)
+						span.checkbox__wrapper
+							input(type="radio", name="seller", id="yes", checked).checkbox
+							label(for="yes") Да
+						span.checkbox__wrapper
+							input(type="radio", name="seller", id="no").checkbox
+							label(for="no") Нет
+					.form__field
+						| Регистрируясь на сайте, вы подтверждаете, что ознакомились и приняли 
+						a(href="") пользовательское соглашение
+					.form__action
+						button(type="submit").btn.btn--primary.btn--md Зарегистрироваться
+						
+	#callback.popup
+		.popup__close.arcticmodal-close
+		.popup__inner
+			h4.popup__header Заказать звонок
+			.popup__body
+				.form
+					.form__field.is--required
+						label.label Ваше имя
+						input(type="text").input
+					.form__field
+						label.label Ваш телефон
+						input(type="text").input
+					.form__action
+						button(type="submit").btn.btn--primary.btn--md Отправить
