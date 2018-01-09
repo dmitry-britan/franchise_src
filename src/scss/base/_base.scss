@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+.container{
+  min-width: 320px;
+  max-width: 1030px;
+	margin: 0 auto;
+  padding: 0 15px;
+  @include clearfix();
+
+  &.is--relative{
+    position: relative;
+  }
+  &.is--table{
+    display: table;
+    height: 100%;
+  }
+}
+a{
+	color: $color__primary;
+  transition: all 300ms linear;
+  &:hover{
+    color: #8e17e2;
+  }
+}
+.is--centered {
+  text-align: center;
+}

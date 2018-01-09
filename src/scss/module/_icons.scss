@@ -1,0 +1,28 @@
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+}
+.icon-login{
+	@include sprite('login');
+}
+.icon-search{
+	@include sprite('search');
+}
+.icon-arrow-left{
+	@include sprite('arrow-left');
+}
+.icon-arrow-right{
+	@include sprite('arrow-right');
+}
+.icon-money{
+	@include sprite('money');
+}
+.icon-calendar{
+	@include sprite('calendar');
+}
+.icon-view{
+	@include sprite('view');
+}
+.icon-eye-grey{
+	@include sprite('eye-grey');
+}

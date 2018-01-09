@@ -1,0 +1,16 @@
+.login{}
+.login__item{
+	display: inline-block;
+	margin-left: 8px;
+	margin-right: 5px;
+	font-size: 12px;
+	font-weight: 400;
+	color: $color__primary;
+	text-decoration: underline;
+	&:last-child{
+		margin-right: 0;
+	}
+	&:hover{
+		color: #8e17e2;
+	}
+}

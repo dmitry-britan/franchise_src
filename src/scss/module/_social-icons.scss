@@ -1,0 +1,19 @@
+.social-icons{}
+.social-icons__link{
+	display: inline-block;
+	margin-right: 8px;
+	border-radius: 50%;
+	font-size: 18px;
+	line-height: 37px;
+	width: 37px;
+	height: 37px;
+	background-color: $color__primary;
+	color: #ffffff;
+	vertical-align: middle;
+	text-align: center;
+
+	&:hover{
+		background-color: $color__secondary;
+		color: #fff;
+	}
+}

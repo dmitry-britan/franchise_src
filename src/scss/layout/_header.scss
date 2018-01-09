@@ -1,0 +1,36 @@
+.header{
+	@include clearfix();
+	background: url('../images/header-bg-left.png') left top no-repeat, url('../images/header-bg-right.png') right top no-repeat, url('../images/header-bg-top.png') center top no-repeat;
+}
+.header__top{
+	padding-top: 12px;
+	padding-bottom: 33px;
+	background-color: hsla(0,0%,87%,.4);
+}
+.header__bottom{
+	background-color: hsla(0,0%,87%,.4);
+}
+.header__logo{
+	padding-top: 20px;
+	float: left;
+}
+.header__search{
+	padding-top: 25px;
+	padding-left: 7.9%;
+	float: left;
+}
+.header__action{
+	float: right;
+	text-align: right;
+}
+.header__contacts{}
+.header__login,
+.header__langs{
+	display: inline-block;
+}
+.header__langs{
+	
+}
+.header__login{
+	margin-right: 10px;
+}

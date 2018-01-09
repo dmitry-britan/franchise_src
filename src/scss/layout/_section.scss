@@ -1,0 +1,46 @@
+.section{
+	padding: 65px 0;
+}
+.section__title{
+	margin: 0 0 37px;
+	font-size: 36px;
+	line-height: 42px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000000;
+
+	&.is--align-left{
+		text-align: left;
+	}
+}
+.section__content{}
+.section__action{
+	padding-top: 30px;
+}
+.section--slider{
+	padding: 0;
+}
+.section--popular{
+	padding-top: 59px;
+}
+.section--news{
+	padding-top: 61px;
+	padding-bottom: 68px;
+	.section__title{
+		margin-bottom: 39px;
+	}
+}
+.section--advantages{
+	padding-top: 60px;
+	background: url('../images/stripe.png') 0 0 repeat;
+	.section__title{
+		margin-bottom: 40px;
+	}
+	.section__content{
+		margin: 0 -45px;
+	}
+}
+.section--catalog{
+	padding-top: 30px;
+}

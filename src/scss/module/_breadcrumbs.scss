@@ -1,0 +1,17 @@
+.breadcrumbs{
+	padding-top: 34px;
+	padding-bottom: 26px;
+}
+.breadcrumbs__item{
+	margin-right: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: $color__primary;
+	font-weight: 400;
+	text-decoration: underline;
+	&.is--current{
+		font-weight: 700;
+		text-decoration: none;
+		color: #020202;
+	}
+}

@@ -1,0 +1,40 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--index')
+
+block content
+  section.section.section--slider
+    .slider
+      .slider__inner.js-slider
+        each i in [1,2,3]
+          .slider__item
+            img(src="images/slider/s-1.jpg", alt="").slider__photo
+            .slider__content
+                .container.is--relative.is--table
+                  .slider__content-inner
+                    .slider__content-brand
+                      img(src="images/slider/b-1.png", alt="")
+                    .slider__content-text Франшиза магазина одежды и обуви для активного отдыха Columbia
+                    a(href="").slider__content-action Посмотреть
+      button.slider__control.slider__control--prev.js-slider-prev
+        i.icon-arrow-left
+      button.slider__control.slider__control--next.js-slider-next
+        i.icon-arrow-right
+
+  section.section.section--popular
+    .container
+      h2.section__title Популярные франшизы
+      .section__content
+        .row
+          each i in [1,2,3,4,5,6,7,8,9]
+            .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
+              include pug/parts/franch
+      .section__action.is--centered
+        a(href="catalog.html").btn.btn--primary.btn--md Все популярные франшизы
+
+  include pug/section/advantage
+  include pug/section/news
+
+
+block body-end

@@ -1,0 +1,38 @@
+.news{}
+.news__divider{
+	height: 1px;
+	width: 100%;
+	margin: 45px 0;
+	background: #dfdfdf;
+	border: none;
+}
+.news__inner{
+	padding: 0 10px;
+}
+.news__photo{
+	display: block;
+	margin-bottom: 25px;
+
+	img {
+		display: block;
+	}
+}
+.news__date{
+	font-size: 9px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #afafaf;
+}
+.news__title{
+	margin: 0;
+	a{
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 400;
+		text-decoration: underline;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}

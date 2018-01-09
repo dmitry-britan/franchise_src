@@ -1,0 +1,15 @@
+.contact-us{}
+.contact-us__phone{
+	padding-bottom: 6px;
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #000000;
+}
+.contact-us__link{
+	border-bottom: 1px dashed;
+	font-size: 12px;
+	line-height: 20px;
+	color: $color__primary;
+	text-decoration: none;
+}

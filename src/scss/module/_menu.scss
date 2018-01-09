@@ -1,0 +1,20 @@
+.menu{
+	margin: 0; padding: 0;
+	list-style-type: none;
+}
+.menu__item{
+	position: relative;
+	padding-bottom: 14px;
+}
+.menu__link{
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 14px;
+	text-decoration: underline;
+	color: $color__primary;
+}
+.menu__link:hover{
+	color: $color__secondary;
+	text-decoration: none;
+}

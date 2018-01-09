@@ -1,0 +1,20 @@
+.footer{
+	@include clearfix();
+	padding: 70px 0;
+	background: url('../images/stripe.png') 0 0 repeat;
+}
+.footer__about{
+	float: left;
+	width: percentage(282/1000);
+}
+.footer__menu{
+	float: left;
+	max-width: percentage(270/1000);
+	padding-left: 31px;
+	padding-right: 16px;
+}
+.footer__subscribe{
+	float: left;
+	min-width: 30%;
+	padding-left: 30px;
+}

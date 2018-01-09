@@ -1,0 +1,92 @@
+.franch{
+	margin-bottom: 16px;
+}
+.franch__inner{
+	position: relative;
+}
+.franch__row{
+	margin-top: 11px;
+
+	&:last-child{
+		margin-top: 15px;
+	}
+}
+.franch__photo{
+	display: block;
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		left: 0; right: 0;
+		top: 0; bottom: 0;
+		width: 100%; height: 100%;
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
+	}
+
+	img {
+		max-width: 100%;
+	}
+}
+.franch__details{
+	position: absolute;
+	bottom: 0; right: 0;
+	padding: 20px 20px 20px 30px;
+	text-align: right;
+}
+.franch__brands{
+	margin-bottom: 5px;
+	text-align: right;
+}
+.franch__title{
+	margin: 0;
+	text-align: right;
+	a {
+		display: block;
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 400;
+		color: #ffffff;
+		text-decoration: none;
+		text-indent: 50%;
+	}
+}
+.franch__investments{
+	margin-right: 15px;
+}
+.franch__investments,
+.franch__payback{
+	display: inline-block;
+	text-align: left;
+	i, span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	i {
+		margin-right: 10px;
+	}
+	span {
+		font-size: 14px;
+		font-weight: 400;
+		color: #fffefe;
+		span{
+			font-size: 10px;
+			line-height: 10px;
+			display: block;
+		}
+	}
+}
+.franch__views{
+	display: inline-block;
+	margin-right: 8px;
+	vertical-align: bottom;
+	font-size: 10px;
+	line-height: 12px;
+	color: #7daef5;
+	i {
+		margin-right: 7px;
+	}
+}
+.franch__action{
+	display: inline-block;
+	vertical-align: bottom;
+}

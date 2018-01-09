@@ -1,0 +1,168 @@
+$sprites: (
+	"arrow-left": (
+		normal: (
+			x: 0,
+			y: 0,
+			width: 53,
+			height: 102,
+			image: "sprites.png",
+			total_width: 141,
+			total_height: 114,
+		),
+		retina: (
+			x: 0,
+			y: 0,
+			width: 106,
+			height: 204,
+			image: "sprites@2x.png",
+			total_width: 282,
+			total_height: 228,
+		),
+	),
+	"arrow-right": (
+		normal: (
+			x: 55,
+			y: 0,
+			width: 53,
+			height: 102,
+			image: "sprites.png",
+			total_width: 141,
+			total_height: 114,
+		),
+		retina: (
+			x: 110,
+			y: 0,
+			width: 106,
+			height: 204,
+			image: "sprites@2x.png",
+			total_width: 282,
+			total_height: 228,
+		),
+	),
+	"calendar": (
+		normal: (
+			x: 110,
+			y: 23,
+			width: 23,
+			height: 24,
+			image: "sprites.png",
+			total_width: 141,
+			total_height: 114,
+		),
+		retina: (
+			x: 220,
+			y: 46,
+			width: 46,
+			height: 48,
+			image: "sprites@2x.png",
+			total_width: 282,
+			total_height: 228,
+		),
+	),
+	"eye-grey": (
+		normal: (
+			x: 110,
+			y: 89,
+			width: 18,
+			height: 10,
+			image: "sprites.png",
+			total_width: 141,
+			total_height: 114,
+		),
+		retina: (
+			x: 220,
+			y: 178,
+			width: 36,
+			height: 20,
+			image: "sprites@2x.png",
+			total_width: 282,
+			total_height: 228,
+		),
+	),
+	"login": (
+		normal: (
+			x: 110,
+			y: 72,
+			width: 15,
+			height: 15,
+			image: "sprites.png",
+			total_width: 141,
+			total_height: 114,
+		),
+		retina: (
+			x: 220,
+			y: 144,
+			width: 30,
+			height: 30,
+			image: "sprites@2x.png",
+			total_width: 282,
+			total_height: 228,
+		),
+	),
+	"money": (
+		normal: (
+			x: 110,
+			y: 0,
+			width: 31,
+			height: 21,
+			image: "sprites.png",
+			total_width: 141,
+			total_height: 114,
+		),
+		retina: (
+			x: 220,
+			y: 0,
+			width: 62,
+			height: 42,
+			image: "sprites@2x.png",
+			total_width: 282,
+			total_height: 228,
+		),
+	),
+	"search": (
+		normal: (
+			x: 110,
+			y: 49,
+			width: 21,
+			height: 21,
+			image: "sprites.png",
+			total_width: 141,
+			total_height: 114,
+		),
+		retina: (
+			x: 220,
+			y: 98,
+			width: 42,
+			height: 42,
+			image: "sprites@2x.png",
+			total_width: 282,
+			total_height: 228,
+		),
+	),
+	"view": (
+		normal: (
+			x: 0,
+			y: 104,
+			width: 18,
+			height: 10,
+			image: "sprites.png",
+			total_width: 141,
+			total_height: 114,
+		),
+		retina: (
+			x: 0,
+			y: 208,
+			width: 36,
+			height: 20,
+			image: "sprites@2x.png",
+			total_width: 282,
+			total_height: 228,
+		),
+	),
+);
+
+@each $name in map-keys($sprites) {
+	.sprite-#{$name} {
+		@include sprite($name);
+	}
+}
