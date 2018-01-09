@@ -13,11 +13,19 @@ header.header
 					.search__example Например, Crema Caffe
 			.header__action
 				.header__login
-					- if ( isLogged ) {
+					- if ( isLogged == 'profile' ) {
 							.login.is--logged
 								a(href="").login__item Профиль
 								ul.login__profile
 									-var links = ["Моя страница (ID 29579)","Мои сообщения","Моя франшиза","Продлить франшизу","Популярность франшиз","Избранные франшизы","Мои данные","Выйти"];
+									each link in links
+										li.login__profile-item
+											a(href="").login__profile-link= link
+					- } else if ( isLogged == 'customer' ) {
+							.login.is--logged
+								a(href="").login__item Профиль
+								ul.login__profile
+									-var links = ["Моя страница (ID 68239)","Мои сообщения","Избранные франшизы","Мои данные","Выйти"];
 									each link in links
 										li.login__profile-item
 											a(href="").login__profile-link= link
@@ -48,7 +56,7 @@ header.header
 					li.nav__item
 						a(href="").nav__link Об ассоциации
 					li.nav__item
-						a(href="").nav__link Каталог франшиз
+						a(href="catalogue.html").nav__link Каталог франшиз
 						//- submenu
 						.nav__submenu
 							ul.nav__submenu-list
@@ -94,7 +102,7 @@ header.header
 									a(href="").nav__submenu-link Финансовые услуги
 						//- /submenu
 					li.nav__item
-						a(href="").nav__link Членство для франчайзеров
+						a(href="membership.html").nav__link Членство для франчайзеров
 					li.nav__item
 						a(href="").nav__link Третейский суд
 					li.nav__item

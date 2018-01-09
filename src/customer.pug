@@ -1,0 +1,31 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--customer')
+  - isLogged = 'customer';
+
+block content
+
+  section.section.section--customer
+    .container
+      .customer-data
+        .customer-data__text
+          | Вы вошли на сайт, как  
+          a(href="").customer-data__link Алексей
+          |  (ID 29579), используя 
+          a(href="").customer-data__link quick.franch.biz
+        a(href="").customer-data__action.btn.btn--primary.btn--md Мои  данные
+      h2.section__title.is--align-left Избранные франшизы
+      .section__content
+        .row
+          each i in [1,2,3,4]
+            .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
+              include pug/parts/franch
+      hr.section__divider
+      .section__action
+        a(href="").btn.btn--primary.btn--lg Добавить франшизу
+
+  include pug/section/advantage
+  include pug/section/news
+
+block body-end
