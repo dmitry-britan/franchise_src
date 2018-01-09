@@ -13,10 +13,20 @@ header.header
 					.search__example Например, Crema Caffe
 			.header__action
 				.header__login
-					.login
-						i.icon.icon-login
-						a(href="").login__item Войти
-						a(href="", data-modal="registration").login__item Регистрация
+					- if ( isLogged ) {
+							.login.is--logged
+								a(href="").login__item Профиль
+								ul.login__profile
+									-var links = ["Моя страница (ID 29579)","Мои сообщения","Моя франшиза","Продлить франшизу","Популярность франшиз","Избранные франшизы","Мои данные","Выйти"];
+									each link in links
+										li.login__profile-item
+											a(href="").login__profile-link= link
+					- } else {
+							.login
+								i.icon.icon-login
+								a(href="profile.html").login__item Войти
+								a(href="", data-modal="registration").login__item Регистрация
+					- }
 				.header__langs
 					.langs
 						.langs__current Рус

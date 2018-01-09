@@ -1,4 +1,26 @@
-.login{}
+.login{
+	&.is--logged{
+		position: relative;
+		margin-top: -12px;
+
+		.login__item{
+			margin: 0;
+			padding: 32px 17px 22px;
+			font-size: 12px;
+			line-height: 12px;
+			color: #fff;
+			text-decoration: none;
+			background-color: #9424e3;
+		}
+		&:hover .login__profile{
+			visibility: visible;
+			opacity: 1;
+			z-index: 30;
+			transform: translateY(0%);
+			transition-delay: 0s, 0s, 0.3s;
+		}
+	}
+}
 .login__item{
 	display: inline-block;
 	margin-left: 8px;
@@ -12,5 +34,33 @@
 	}
 	&:hover{
 		color: #8e17e2;
+	}
+}
+.login__profile{
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	right: 0; top: 53px;
+	width: 200px;
+	margin: 0;
+	padding: 24px 16px;
+	list-style: none;
+	background: #9424e3 url('../images/profile-bg.png') left bottom no-repeat;
+
+	transform: translateY(-8px);
+	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+	z-index: -1;
+}
+.login__profile-item{}
+.login__profile-link{
+	display: block;
+	padding: 4px 0;
+	font-size: 12px;
+	line-height: 16px;
+	text-decoration: underline;
+	color: #fff;
+	&:hover{
+		color: #fff;
+		text-decoration: none;
 	}
 }

@@ -1,0 +1,62 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--profile')
+  - isLogged = true;
+
+block content
+
+  section.section.section--profile
+    .container
+      h2.section__title.is--align-left Мои данные
+      .section__content
+        form(action="").form.row
+          .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+            .form__upload
+              label(for='file-11').form__upload-img
+                img(src="images/upload.png", alt="", data-upload="file-11")
+              input#file-11.form__upload-file(type='file', name='file-11')
+              label(for='file-11').form__upload-label Изменить фото
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+            .form__field.is--required
+              label.label Имя и фамилия
+              input(type="text").input
+            .form__field
+              label.label Дата рождения
+              input(type="text").input
+            .form__field.is--required
+              label.label E-mail
+              input(type="email").input
+            .form__field
+              label.label Телефон
+              input(type="text").input
+            .form__field.is--required
+              label.label Страна
+              input(type="text").input
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+            .form__field.is--required
+              label.label Тип аккаунта
+              input(type="text").input
+            .form__field
+              label.label Пол
+              input(type="text").input
+            .form__field
+              label.label Сайт
+              input(type="text").input
+            .form__field
+              label.label Skype
+              input(type="text").input
+            .form__field.is--required
+              label.label Город
+              input(type="text").input
+          .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+            .form__field
+              label.label Обо мне
+              textarea(name="", cols="30", rows="10").textarea
+            .form__action
+              button(type="submit").btn.btn--primary.btn--md Все популярные франшизы
+
+  include pug/section/advantage
+  include pug/section/news
+
+block body-end
