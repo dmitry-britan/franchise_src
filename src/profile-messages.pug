@@ -1,12 +1,12 @@
 extends pug/base
 
 append vars
-  - html.classList.push('page--customer')
+  - html.classList.push('page--profile')
   - isLogged = 'customer';
 
 block content
 
-  section.section.section--customer
+  section.section.section--profile
     .container
       include pug/parts/customer-data
       h2.section__title.is--align-left Мои сообщения
