@@ -1,0 +1,26 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--customer')
+  - isLogged = 'customer';
+
+block content
+
+  section.section.section--customer
+    .container
+      .customer-data
+        .customer-data__text
+          | Вы вошли на сайт, как  
+          a(href="").customer-data__link Алексей
+          |  (ID 29579), используя 
+          a(href="").customer-data__link quick.franch.biz
+        a(href="").customer-data__action.btn.btn--primary.btn--md Мои  данные
+      h2.section__title.is--align-left Мои сообщения
+      .section__content
+        each i in [1,2,3,4,5,6]
+          include pug/parts/message
+
+  include pug/section/advantage
+  include pug/section/news
+
+block body-end
