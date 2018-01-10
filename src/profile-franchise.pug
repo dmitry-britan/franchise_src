@@ -1,0 +1,56 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--profile')
+  - isLogged = 'profile';
+
+block content
+
+  section.section.section--profile
+    .container
+      include pug/parts/customer-data
+    
+    include pug/section/functions
+    .container
+      h1.section__title.is--align-left Моя франшиза
+      .section__content
+        .franchise-info
+          .franchise-info__inner
+            .franchise-info__view
+              include pug/parts/franch
+            .franchise-info__details
+              h2.franchise-info__title 4hands
+              p.franchise-info__desc Франшиза студии экспресс-маникюра и педикюра
+              ul.franchise-info__properties
+                li.franchise-info__properties-item 
+                  span Размещение франшизы до 
+                  strong 11.04.2018
+                  a(href="") Продлить франшизу
+                li.franchise-info__properties-item 
+                  span Популярность франшизы: 
+                  strong 2582 (№5)
+                  a(href="") Поднять популярность
+                li.franchise-info__properties-item 
+                  span Просмотры франшизы: 
+                  strong 1746
+                  a(href="") Статистика франшизы
+                li.franchise-info__properties-item 
+                  span Комментарии о франшизе: 
+                  strong 191
+                  a(href="") Все комментарии
+              .franchise-info__action
+                a(href="").btn.btn--primary Редактировать франшизу
+      hr.section__divider
+      .section__action
+        a(href="").btn.btn--primary.btn--lg Добавить франшизу
+  section.section.section--messages
+    .container
+      .section__content
+        each i in [1,2,3]
+          include pug/parts/message
+        a(href="profile-messages.html") Все сообщения
+  
+  include pug/section/advantage
+  include pug/section/news
+
+block body-end

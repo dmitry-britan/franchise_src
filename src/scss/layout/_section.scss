@@ -48,10 +48,19 @@
 		margin: 0 -45px;
 	}
 }
+.section--functions{
+	padding-top: 44px;
+	padding-bottom: 50px;
+	margin-bottom: 65px;
+	background: url('../images/stripe.png') 0 0 repeat;
+}
 .section--catalog,
 .section--articles,
 .section--catalogue,
 .section--customer,
 .section--membership{
 	padding-top: 30px;
+}
+.section--messages{
+	padding-top: 0;
 }

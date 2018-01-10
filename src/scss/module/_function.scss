@@ -1,0 +1,31 @@
+.function{}
+.function__inner{
+	max-width: 300px;
+	margin: 0 auto;
+}
+.function__icon{
+	margin-bottom: 20px;
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+}
+.function__title{
+	margin: 0 0 14px;
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000000;
+}
+.function__text{
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #000;
+	text-align: center;
+	strong{
+		color: #9424e3;
+	}
+}

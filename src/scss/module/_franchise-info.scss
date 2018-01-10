@@ -1,0 +1,64 @@
+.franchise-info{
+	display: table;
+	width: 100%;
+}
+.franchise-info__inner{
+	display: table-row;
+}
+.franchise-info__view{
+	display: table-cell;
+	vertical-align: top;
+	width: 320px;
+}
+.franchise-info__details{
+	display: table-cell;
+	vertical-align: top;
+	padding-left: 60px;
+}
+.franchise-info__title{
+	margin: 0 0 8px;
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #000;
+}
+.franchise-info__desc{
+	margin: 0 0 30px;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #a2a2a2;
+}
+.franchise-info__properties{
+	margin: 0 0 48px;
+	padding: 0;
+	list-style: none;
+}
+.franchise-info__properties-item{
+	display: block;
+	padding: 12px 0;
+	border-bottom: 1px solid #dededd;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #000;
+	@include clearfix();
+	&:last-child{
+		border-bottom: none;
+	}
+	span{
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		color: #000;
+	}
+	strong{
+		color: #9424e3;
+		font-weight: 700;
+	}
+	a{
+		float: right;
+	}
+}
+.franchise-info__action{}
