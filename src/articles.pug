@@ -1,0 +1,27 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--articles')
+
+block content
+  - var breadcrumbs = ["Главная","Третейский суд"];
+  include pug/parts/breadcrumbs
+
+  section.section.section--articles
+    .container
+      h2.section__title.is--align-left Третейский суд
+      .section__content
+        - var titles = ["Общие сведения", "Постоянно действующий третейский суд при Киевской торгово-промышленной палате", "Руководство Постоянно действующего третейского суда", "Третейский суд", "Третейский суд"];
+        each title in titles
+          article.article
+            .article__inner
+              .article__photo
+                img(src="images/article.jpg", alt="")
+              .article__content
+                h3.article__title
+                  a(href="")= title
+                p.article__text Третейские суды не входят в систему судов общей юрисдикции. Однако, это обстоятельство не лишает лиц права обращаться к ним за разрешением споров. Решения третейских судов являются окончательными и подлежат обязательному исполнению.
+      .section__action
+        include pug/parts/pagination
+
+block body-end
