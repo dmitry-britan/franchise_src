@@ -21,7 +21,7 @@ block content
     .franchise__details
       .container
         .franchise__photos
-          .franchise__photo
+          a(href="images/franchise/f-1.jpg", rel="gallery").franchise__photo
             img(src="images/franchise/f-1.jpg", alt="")
           .franchise__thumbs
             button.franchise__thumbs-control.franchise__thumbs-control--prev.js-thumbs-slider-prev
@@ -29,7 +29,7 @@ block content
             .franchise__thumbs-inner.js-thumbs-slider
               each k in [1,2]
                 each i in [1,2,3]
-                  a(href="").franchise__thumbs-item
+                  a(href="images/franchise/t-"+i+".jpg", rel="gallery").franchise__thumbs-item
                     img(src="images/franchise/t-"+i+".jpg", alt="")
             button.franchise__thumbs-control.franchise__thumbs-control--next.js-thumbs-slider-next
               i.fa.fa-angle-down

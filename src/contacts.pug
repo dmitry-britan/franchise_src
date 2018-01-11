@@ -15,20 +15,20 @@ block content
         .map
           img(src="images/map.jpg", alt="")
 
-        form(action="").form.row
+        form(action="").form.js-form-ask.row
           .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
             .form__title Задать вопрос
           .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
             .form__field.is--required
               label.label Имя и фамилия
-              input(type="text").input
+              input(type="text", name="name").input
             .form__field.is--required
               label.label Ваш e-mail
-              input(type="email").input
+              input(type="email", name="email").input
           .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
             .form__field.is--required
               label.label Вопрос
-              textarea(name="", cols="30", rows="10").textarea
+              textarea(name="comment", cols="30", rows="10").textarea
             .form__action
               button(type="submit").btn.btn--primary.btn--md Отправить
 

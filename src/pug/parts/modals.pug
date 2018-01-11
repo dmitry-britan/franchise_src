@@ -4,19 +4,19 @@ div(style='display: none;')
 		.popup__inner
 			h4.popup__header Быстрая регистрация
 			.popup__body
-				form(action="").form
+				form(action="").form.js-form-registration
 					.form__field.is--required
 						label.label Ваше имя
-						input(type="text").input
+						input(type="text", name="name").input
 					.form__field.is--required
 						label.label Ваш e-mail
-						input(type="email").input
+						input(type="email", name="email").input
 					.form__field
 						label.label Ваш телефон
-						input(type="text").input
+						input(type="text", name="phole").input
 					.form__field
 						label.label Откуда вы?
-						input(type="text").input
+						input(type="text", name="from").input
 					.form__field
 						| Я — продавец франшизы (франчайзер)
 						span.checkbox__wrapper
@@ -36,12 +36,12 @@ div(style='display: none;')
 		.popup__inner
 			h4.popup__header Заказать звонок
 			.popup__body
-				form(action="").form
+				form(action="").form.js-form-callback
 					.form__field.is--required
 						label.label Ваше имя
-						input(type="text").input
+						input(type="text", name="name").input
 					.form__field
 						label.label Ваш телефон
-						input(type="text").input
+						input(type="text", name="phone").input
 					.form__action
 						button(type="submit").btn.btn--primary.btn--md Отправить
