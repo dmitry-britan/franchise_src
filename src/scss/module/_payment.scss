@@ -1,0 +1,64 @@
+.payment{}
+.payment__currency{
+	margin-bottom: 40px;
+}
+.payment__currency-item{
+	margin-right: 15px;
+	font-size: 12px;
+	font-weight: 400;
+	&.is--current{
+		color: #000;
+		font-weight: 700;
+	}
+}
+.payment__items{
+	display: table;
+	width: 100%;
+}
+.payment__item{
+	display: table-cell;
+	vertical-align: top;
+	width: 25%;
+	text-align: center;
+	&:first-child{
+		text-align: left;
+	}
+	&:last-child{
+		text-align: right;
+	}
+}
+.payment__item-inner{
+	position: relative;
+	display: inline-block;
+	max-width: 190px;
+	min-height: 226px;
+	padding-bottom: 46px;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: 400;
+	color: #000000;
+	text-align: center;
+}
+.payment__item-price{
+	font-size: 18px;
+	line-height: 20px;
+}
+.payment__item-period{
+	margin-bottom: 12px;
+	font-size: 18px;
+	line-height: 20px;
+}
+.payment__item-prop{}
+.payment__item-link{
+	margin-bottom: 16px;
+}
+.payment__item-date{
+	strong{
+		color: #9424e3;
+	}
+}
+.payment__item-action{
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+	margin: 0 auto;
+}

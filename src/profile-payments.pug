@@ -1,0 +1,80 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--profile')
+  - isLogged = 'customer';
+
+block content
+
+  section.section.section--profile
+    .container
+      include pug/parts/customer-data
+      h2.section__title.is--align-left Пополнить баланс и продлить
+      .section__content
+        .payment
+          .payment__currency
+            a(href="").payment__currency-item Рубль
+            span.payment__currency-item.is--current Гривна
+            a(href="").payment__currency-item Доллар
+          .payment__items
+            .payment__item
+              .payment__item-inner
+                .payment__item-price 1'800 грн.
+                .payment__item-period 30 дней
+                .payment__item-prop популярность — 50 
+                .payment__item-link
+                  a(href="") подробнее
+                .payment__item-date
+                  | Срок до 
+                  strong 11.05.2018
+                .payment__item-action
+                  a(href="").btn.btn--primary оплатить
+            .payment__item
+              .payment__item-inner
+                .payment__item-price 5'800 грн.
+                .payment__item-period 90 дней
+                .payment__item-prop популярность — 200
+                .payment__item-prop + баннер на 15 дней
+                .payment__item-prop +1 общая рассылка
+                .payment__item-link
+                  a(href="") подробнее
+                .payment__item-date
+                  | Срок до 
+                  strong 10.07.2018
+                .payment__item-action
+                  a(href="").btn.btn--primary оплатить
+            .payment__item
+              .payment__item-inner
+                .payment__item-price 11'500 грн.
+                .payment__item-period 180 дней
+                .payment__item-prop популярность — 500
+                .payment__item-prop + баннер на 40 дней
+                .payment__item-prop +2 общих рассылки
+                .payment__item-link
+                  a(href="") подробнее
+                .payment__item-date
+                  | Срок до 
+                  strong 08.10.2018
+                .payment__item-action
+                  a(href="").btn.btn--primary оплатить
+            .payment__item
+              .payment__item-inner
+                .payment__item-price 23'000 грн.
+                .payment__item-period 360 дней
+                .payment__item-prop популярность — 1200
+                .payment__item-prop + баннер на 90 дней
+                .payment__item-prop +3 общих рассылки
+                .payment__item-prop +1 индивидуальная рассылка
+                .payment__item-link
+                  a(href="") подробнее
+                .payment__item-date
+                  | Срок до 
+                  strong 06.04.2019
+                .payment__item-action
+                  a(href="").btn.btn--primary оплатить
+      hr.section__divider
+
+  include pug/section/advantage
+  include pug/section/news
+
+block body-end
