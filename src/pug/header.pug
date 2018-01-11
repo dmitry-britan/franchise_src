@@ -18,7 +18,7 @@ header.header
 								a(href="").login__item Профиль
 								ul.login__profile
 									-var items = ["Моя страница (ID 29579)","Мои сообщения","Моя франшиза","Продлить франшизу","Популярность франшиз","Избранные франшизы","Мои данные","Выйти"];
-									-var links = ["profile.html","profile-messages.html","profile-franchise.html","","","profile-favorites.html","profile-data.html",""]
+									-var links = ["profile.html","profile-messages.html","profile-franchise.html","profile-payments.html","","profile-favorites.html","profile-data.html",""]
 									each item, i in items
 										li.login__profile-item
 											a(href=links[i]).login__profile-link= item
@@ -34,7 +34,7 @@ header.header
 					- } else {
 							.login
 								i.icon.icon-login
-								a(href="profile.html").login__item Войти
+								a(href="profile-data.html").login__item Войти
 								a(href="", data-modal="registration").login__item Регистрация
 					- }
 				.header__langs
@@ -56,52 +56,52 @@ header.header
 					li.nav__item
 						a(href="").nav__link Ищу франшизу
 					li.nav__item
-						a(href="").nav__link Об ассоциации
+						a(href="about.html").nav__link Об ассоциации
 					li.nav__item
-						a(href="catalogue.html").nav__link Каталог франшиз
+						a(href="catalog.html").nav__link Каталог франшиз
 						//- submenu
 						.nav__submenu
 							ul.nav__submenu-list
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Авто
+									a(href="catalog.html").nav__submenu-link Авто
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Гостиницы
+									a(href="catalog.html").nav__submenu-link Гостиницы
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Здоровье и красота
+									a(href="catalog.html").nav__submenu-link Здоровье и красота
 								li.nav__submenu-item
-									a(href="").nav__submenu-link ИТ и интернет
+									a(href="catalog.html").nav__submenu-link ИТ и интернет
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Кафе и рестораны
+									a(href="catalog.html").nav__submenu-link Кафе и рестораны
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Недорогие франшизы
+									a(href="catalog.html").nav__submenu-link Недорогие франшизы
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Обучение и образование
+									a(href="catalog.html").nav__submenu-link Обучение и образование
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Одежда и обувь
+									a(href="catalog.html").nav__submenu-link Одежда и обувь
 							ul.nav__submenu-list
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Отдых и развлечения
+									a(href="catalog.html").nav__submenu-link Отдых и развлечения
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Питание
+									a(href="catalog.html").nav__submenu-link Питание
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Производство
+									a(href="catalog.html").nav__submenu-link Производство
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Розничная торговля
+									a(href="catalog.html").nav__submenu-link Розничная торговля
 								li.nav__submenu-item
-									a(href="").nav__submenu-link СМИ
+									a(href="catalog.html").nav__submenu-link СМИ
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Строительство и ремонт
+									a(href="catalog.html").nav__submenu-link Строительство и ремонт
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Транспортные услуги
+									a(href="catalog.html").nav__submenu-link Транспортные услуги
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Улуги для бизнеса
+									a(href="catalog.html").nav__submenu-link Улуги для бизнеса
 							ul.nav__submenu-list
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Услуги для детей
+									a(href="catalog.html").nav__submenu-link Услуги для детей
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Услуги для населения
+									a(href="catalog.html").nav__submenu-link Услуги для населения
 								li.nav__submenu-item
-									a(href="").nav__submenu-link Финансовые услуги
+									a(href="catalog.html").nav__submenu-link Финансовые услуги
 						//- /submenu
 					li.nav__item
 						a(href="membership.html").nav__link Членство для франчайзеров
