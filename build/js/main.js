@@ -66,6 +66,41 @@ function createSlider(selector, options) {
 	return new Slider(selector, options);
 }
 
+//
+// Slider - on main page
+// =================================================================
+if ($('.js-slider').length) {
+	$('.js-slider').slick({
+		arrows: true,
+		infinite: true,
+		speed: 400,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		//autoplay: true,
+		adaptiveHeight: true,
+		nextArrow: $('.js-slider-next'),
+		prevArrow: $('.js-slider-prev')
+	});
+}
+
+//
+// Slider - franchise thumbs
+// =================================================================
+if ($('.js-thumbs-slider').length) {
+	$('.js-thumbs-slider').slick({
+		arrows: true,
+		vertical: true,
+		infinite: true,
+		speed: 400,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		//autoplay: true,
+		adaptiveHeight: true,
+		nextArrow: $('.js-thumbs-slider-next'),
+		prevArrow: $('.js-thumbs-slider-prev')
+	});
+}
+
 /* Get Device Width */
 function getWidth() {
 	if (self.innerWidth) {
@@ -177,41 +212,6 @@ $('[data-modal]').on('click', function(e) {
 });
 
 //
-// Slider - on main page
-// =================================================================
-if ($('.js-slider').length) {
-	$('.js-slider').slick({
-		arrows: true,
-		infinite: true,
-		speed: 400,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		//autoplay: true,
-		adaptiveHeight: true,
-		nextArrow: $('.js-slider-next'),
-		prevArrow: $('.js-slider-prev')
-	});
-}
-
-//
-// Slider - franchise thumbs
-// =================================================================
-if ($('.js-thumbs-slider').length) {
-	$('.js-thumbs-slider').slick({
-		arrows: true,
-		vertical: true,
-		infinite: true,
-		speed: 400,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		//autoplay: true,
-		adaptiveHeight: true,
-		nextArrow: $('.js-thumbs-slider-next'),
-		prevArrow: $('.js-thumbs-slider-prev')
-	});
-}
-
-//
 // Обработка элемента формы input[type=file]
 // =================================================================
 function showUploadThumb(input) {
@@ -249,3 +249,123 @@ $('input[type=file]').on('change', function(event) {
 
 	showUploadThumb(event.currentTarget);
 });
+
+//
+// Валидация формы "Задать вопрос"
+// =================================================================
+var validateFormAsk = {
+	rules: {
+		name: {
+			required: true
+		},
+		email: {
+			required: true,
+			email: true
+		},
+		comment: {
+			required: true
+		}
+	},
+	messages: {
+		name: {
+			required: 'Введите Ваше имя'
+		},
+		email: {
+			email: 'Введите корректный e-mail адрес',
+			required: 'Введите Ваш e-mail'
+		},
+		comment: {
+			required: 'Введите Ваше сообщение'
+		}
+	},
+	submitHandler: function submitHandler(form) {
+		// ////////////////////
+		//  AJAX CODE GOES HERE
+		// ////////////////////
+		form.reset();
+	},
+	focusCleanup: true,
+	focusInvalid: false
+};
+
+// ASK FORM
+$('.js-form-ask').validate(validateFormAsk);
+
+//
+// Валидация формы "Заказать обратный звонок"
+// =================================================================
+var validateFormCallback = {
+	rules: {
+		name: {
+			required: true
+		}
+	},
+	messages: {
+		name: {
+			required: 'Введите Ваше имя'
+		}
+	},
+	submitHandler: function submitHandler(form) {
+		// ////////////////////
+		//  AJAX CODE GOES HERE
+		// ////////////////////
+		form.reset();
+	},
+	focusCleanup: true,
+	focusInvalid: false
+};
+
+// CALLBACK FORM
+$('.js-form-callback').validate(validateFormCallback);
+
+// 
+// Валидация формы "Быстрая Регистрация"
+// =================================================================
+var validateFormRegistration = {
+	rules: {
+		name: {
+			required: true
+		},
+		email: {
+			required: true,
+			email: true
+		}
+	},
+	messages: {
+		name: {
+			required: 'Введите Ваше имя'
+		},
+		email: {
+			email: 'Введите корректный e-mail адрес',
+			required: 'Введите Ваш e-mail'
+		}
+	},
+	submitHandler: function submitHandler(form) {
+		// ////////////////////
+		//  AJAX CODE GOES HERE
+		// ////////////////////
+		form.reset();
+	},
+	focusCleanup: true,
+	focusInvalid: false
+};
+
+// REGISTRATION FORM
+$('.js-form-registration').validate(validateFormRegistration);
+
+//
+// Подключаем fancybox для фото товара
+//---------------------------------------------------------------------------------------
+var $gallery = $('[rel="gallery"]');
+
+if ($gallery.length) {
+	$gallery.fancybox({
+		openEffect: 'elastic',
+		closeEffect: 'elastic',
+		helpers: {
+			title: {
+				type: 'inside'
+			}
+		}
+	});
+}
