@@ -1,0 +1,111 @@
+form(action="").form.row.js-form-franchise-cost
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field.form__field--select
+			label.label Выберите валюту
+			select(name="currency").select
+				option(value="uah") Гривны
+				option(value="rub") Рубли
+				option(value="usd") Доллары
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+			.form__field
+				label.label Вступительный взнос, грн.
+				input(type="text", name="fee_min").input
+				label.label.is--empty
+				input(type="text", name="fee_max").input
+			.form__field
+				input(type="checkbox", name="fee", id="fee").checkbox.is--small
+				label(for="fee") Вступительный взнос отсутствует
+	.col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
+		.form__field
+			label.label Вступительный взнос, грн.
+			textarea(name="fee_desc", cols="30", rows="10").textarea
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+			.form__field
+				label.label Инвестиции, грн.
+				.form__field-desc.is--alt Внимание! Инвестиции не должны включать в себя вступительный взнос, указанный выше
+				input(type="text", name="investment_min").input
+				label.label.is--empty
+				input(type="text", name="investment_max").input
+			.form__field
+				input(type="checkbox", name="investment", id="investment").checkbox.is--small
+				label(for="investment") Инвестиции указаны за 1 кв. м
+			.form__field
+				.is--text-small.js-investment-calc
+					| Итого, общие затраты:
+					br
+					strong 15 802 000 — 110 130 000
+					|  грн.
+	.col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
+		.form__field
+			label.label Что входит в сумму инвестиций?
+			.form__field-desc Перечень должен отличаться от того, что указано в поле выше — «Что входит во вступительный взнос?»
+			textarea(name="investment_desc", cols="30", rows="10").textarea.is--large-beta
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+			.form__field
+				label.label Окупаемость, месяцев
+				input(type="text", name="return_period_min").input
+				label.label.is--empty
+				input(type="text", name="return_period_max").input
+			.form__field
+				label.label Чистая прибыль в месяц, грн.
+				input(type="text", name="return_min").input
+				label.label.is--empty
+				input(type="text", name="return_max").input
+	.col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
+		.form__field
+			label.label Дополнительные услуги для франчайзи
+			.form__field-desc Услуги, которые не входят во вступительный взнос или сумму инвестиций
+			textarea(name="franchise_extra", cols="30", rows="10").textarea.is--large-alpha
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+	
+	
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field.form__field--select
+			label.label Роялти
+			select(name="royalty").select
+				option(value="0") Процент
+				option(value="1") Процент
+				option(value="2") Процент
+		.form__field
+			label.label Ставка процента
+			input(type="text", name="interest_rate").input
+		.form__field
+			label.label База для расчета
+			input(type="text", name="calculation").input
+
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field.form__field--select
+			label.label Периодичность уплаты
+			select(name="periodicity_payment").select
+				option(value="0") Раз в месяц
+				option(value="1") Раз в месяц
+				option(value="2") Раз в месяц
+		.form__field
+			label.label Рекламные отчисления
+			input(type="text", name="advertising_charges", placeholder="Отсутствуют").input
+
+	.col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
+		.form__field
+			label.label Прочие отчисления и платежи (если есть)
+			textarea(name="franchise_extra", cols="30", rows="10").textarea.is--large-beta
+
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+		
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		.form__action
+			button(type="submit").btn.btn--primary.btn--md Сохранить

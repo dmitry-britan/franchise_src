@@ -36,6 +36,7 @@
 	color: $color__primary;
 	cursor: pointer;
 	transition: all 300ms linear;
+	&.is--active,
 	&:hover{
 		border: 1px solid $color__secondary;
 		color: $color__secondary;

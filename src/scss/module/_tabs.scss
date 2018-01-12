@@ -1,0 +1,33 @@
+.tabs{}
+.tabs__list{
+	margin-bottom: 40px;
+	border-bottom: 1px solid #dfdfdf;
+	@include clearfix();
+}
+.tabs__list-item{
+	float: left;
+	padding: 9px 20px 14px;
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	border-bottom-width: 0;
+	font-size: 24px;
+	font-weight: 400;
+	color: $color__primary;
+	text-decoration: none;
+	&:focus{
+		outline: none;
+	}
+	&.is--active{
+		margin-bottom: -1px;
+		border-color: #dfdfdf;
+		border-bottom-width: 1px;
+		border-bottom-color: #ffffff;
+		color: #000000;
+	}
+}
+.tabs__content{
+	display: none;
+	&.is--active{
+		display: block;
+	}
+}

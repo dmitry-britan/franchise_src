@@ -38,6 +38,15 @@ a{
 .is--centered {
   text-align: center;
 }
+.is--text-small{
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #000000;
+  strong{
+    color: #9424e3;
+  }
+}
 .is--text-lg{
   font-size: 18px;
   line-height: 21px;

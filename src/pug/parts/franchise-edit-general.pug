@@ -1,0 +1,148 @@
+form(action="").form.row.js-form-franchise-general
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		.form__field.is--required
+			label.label Имя и фамилия
+			input(type="text", name="name").input
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		p 
+			strong Укажите преимущества вашей франшизы:
+	.col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+		.form__field
+			label.label Преимущество №1
+			input(type="text", name="advantage_1").input
+	.col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+		.form__field
+			label.label Преимущество №2
+			input(type="text", name="advantage_2").input
+	.col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+		.form__field
+			label.label Преимущество №3
+			input(type="text", name="advantage_3").input
+	.col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+		.form__field
+			label.label Преимущество №4
+			input(type="text", name="advantage_4").input
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+		.form__field.form__field--select
+			label.label Страна происхождения
+			select(name="country").select
+				option(value="rus") Россия
+				option(value="ukr") Украина
+				option(value="kaz") Казахстан
+				option(value="blr") Беларусь
+				option(value="mda") Молдова
+		.form__field.form__field--select
+			label.label Сфера бизнеса
+			select(name="business").select
+				option(value="1") Фаст-фуды
+				option(value="2") Фаст-фуды
+				option(value="3") Фаст-фуды
+		.row
+			.col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+				.form__field
+					label.label Cобственные точки
+					input(type="text", name="own_business").input
+			.col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+				.form__field
+					label.label Франчайзинговые точки
+					input(type="text", name="franchise_business").input
+
+	.col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+		.form__field
+			label.label В каких регионах продается франшиза?
+			ul.list
+				li.list__item
+					.list__item-left Россия
+					.list__item-right 
+						span.checkbox__wrapper
+							input(type="radio", name="rus", id="rusYes", value="1", checked).checkbox.is--small.is--right
+							label(for="rusYes") Да
+						span.checkbox__wrapper
+							input(type="radio", name="rus", id="rusNo", value="0").checkbox.is--small.is--right
+							label(for="rusNo") Нет
+				li.list__item
+					.list__item-left Украина
+					.list__item-right 
+						span.checkbox__wrapper
+							input(type="radio", name="ukr", id="ukrYes", value="1", checked).checkbox.is--small.is--right
+							label(for="ukrYes") Да
+						span.checkbox__wrapper
+							input(type="radio", name="ukr", id="ukrNo", value="0").checkbox.is--small.is--right
+							label(for="ukrNo") Нет
+				li.list__item
+					.list__item-left Казахстан
+					.list__item-right 
+						span.checkbox__wrapper
+							input(type="radio", name="kaz", id="kazYes", value="1", checked).checkbox.is--small.is--right
+							label(for="kazYes") Да
+						span.checkbox__wrapper
+							input(type="radio", name="kaz", id="kazNo", value="0").checkbox.is--small.is--right
+							label(for="kazNo") Нет
+				li.list__item
+					.list__item-left Беларусь
+					.list__item-right 
+						span.checkbox__wrapper
+							input(type="radio", name="blr", id="blrYes", value="1", checked).checkbox.is--small.is--right
+							label(for="blrYes") Да
+						span.checkbox__wrapper
+							input(type="radio", name="blr", id="blrNo", value="0").checkbox.is--small.is--right
+							label(for="blrNo") Нет
+				li.list__item
+					.list__item-left Молдова
+					.list__item-right 
+						span.checkbox__wrapper
+							input(type="radio", name="mda", id="mdaYes", value="1", checked).checkbox.is--small.is--right
+							label(for="mdaYes") Да
+						span.checkbox__wrapper
+							input(type="radio", name="mda", id="mdaNo", value="0").checkbox.is--small.is--right
+							label(for="mdaNo") Нет
+		.form__field
+			label.label Другие регионы
+			input(type="text", name="countries").input
+
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+	
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Количество сотрудников
+			input(type="text", name="worker_min").input
+			label.label.is--empty
+			input(type="text", name="worker_max").input
+		.form__field
+			label.label Необходимая площадь, м²
+			input(type="text", name="area_min").input
+			label.label.is--empty
+			input(type="text", name="area_max").input
+
+	.col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
+		.form__field
+			label.label Требования к помещению и партнеру
+			textarea(name="requirements", cols="30", rows="10").textarea.is--large
+
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		p Подробно расскажите о своей франшизе. Рекомендуем упомянуть:
+		ul
+			li Краткую историю марки
+			li Описание товара или услуги
+			li Ваши конкурентные преимущества перед другими франшизами
+		p
+			strong Внимание! Общий объем качественно написанного текста должен составлять не менее 1000 знаков.
+	.col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
+		.form__field
+			label.label Подробное описание франшизы
+			textarea(name="description", cols="30", rows="10").textarea.is--large
+
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+		
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		.form__action
+			button(type="submit").btn.btn--primary.btn--md Сохранить

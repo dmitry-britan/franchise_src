@@ -1,0 +1,69 @@
+form(action="").form.row.js-form-franchise-extra
+	.col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
+		.form__field
+			label.label Владелец франшизы
+			input(type="text", name="owner").input
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Год начала работы
+			input(type="text", name="work_year").input
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Год начала франчайзинга
+			input(type="text", name="franchise_year").input
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		p 
+			strong Города, в которых представлены объекты сети
+			
+	.col.col--4-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12
+		.form__field
+			label.label Города России
+			textarea(name="rus_cities", cols="30", rows="10").textarea
+	.col.col--4-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12
+		.form__field
+			label.label Города Украины
+			textarea(name="ukr_cities", cols="30", rows="10").textarea
+	.col.col--4-of-12.col--s-12-of-12.col--m-12-of-12.col--l-4-of-12
+		.form__field
+			label.label Города в других странах мира
+			textarea(name="other_cities", cols="30", rows="10").textarea
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Стоимость товаров/услуг
+			.form__field-desc Средняя стоимость товаров или услуг в вашей сети
+			input(type="text", name="services_cost").input
+			label.label.is--empty
+			.form__field-desc Валюту можно изменить на вкладке «Затраты»
+	.col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
+		.form__field
+			label.label Опишите основные группы товаров или услуг
+			textarea(name="services_desc", cols="30", rows="10").textarea
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+		.form__field
+			label.label Форматы франшизы
+			.form__field-desc Опишите различные формы или виды организации франшизы (если они есть)
+			textarea(name="franchise_formats", cols="30", rows="10").textarea
+	.col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+		.form__field
+			label.label Прочие условия франшизы
+			.form__field-desc Опишите все прочие условия франшизы, которые не были указаны ранее
+			textarea(name="franchise_conditions", cols="30", rows="10").textarea
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+		
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		.form__action
+			button(type="submit").btn.btn--primary.btn--md Сохранить

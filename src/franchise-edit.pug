@@ -1,0 +1,42 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--profile')
+  - isLogged = 'profile';
+
+block content
+
+  section.section.section--profile
+    .container
+      h2.section__title.is--align-left Редактировать франшизу
+      .section__text
+        | Размещение вашей франшизы закончится 
+        strong 11.04.2018
+        |  
+        a(href="") Продлить
+        |  
+        a(href="") Поднять популярность
+
+    .section__content
+      .tabs.js-tabs
+        .tabs__list
+          .container
+            a(href="#general").tabs__list-item.js-tabs-item Основное
+            a(href="#cost").tabs__list-item.js-tabs-item.is--active Затраты
+            a(href="#extra").tabs__list-item.js-tabs-item Дополнительно
+            a(href="#media").tabs__list-item.js-tabs-item Мультимедиа
+            a(href="#contacts").tabs__list-item.js-tabs-item Контакты
+        .container
+          #general.tabs__content.js-tabs-content
+            include pug/parts/franchise-edit-general
+          #cost.tabs__content.is--active.js-tabs-content
+            include pug/parts/franchise-edit-cost
+          #extra.tabs__content.js-tabs-content
+            include pug/parts/franchise-edit-extra
+          #media.tabs__content.js-tabs-content
+          #contacts.tabs__content.js-tabs-content
+
+  include pug/section/advantage
+  include pug/section/news
+
+block body-end
