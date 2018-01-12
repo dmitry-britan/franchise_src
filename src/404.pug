@@ -1,0 +1,26 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--404')
+
+block content
+  - var breadcrumbs = ["Главная","Страница не найдена"];
+  include pug/parts/breadcrumbs
+
+  section.section.section--page
+    .container
+      h2.section__title.is--align-left Страница не найдена
+      .section__content
+        .p404
+          .p404__title 404
+          .p404__text
+            | Неправильно набран адрес, 
+            br
+            | или такой страницы на сайте больше не существует.
+          .p404__action
+            a(href="") Вернитесь на главную
+
+  include pug/section/advantage
+  include pug/section/news
+
+block body-end
