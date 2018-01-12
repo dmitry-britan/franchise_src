@@ -376,6 +376,9 @@ textarea {
 	margin-left: 10px;
 	overflow: hidden;
 	vertical-align: middle;
+	&.is--no-marging{
+		margin-left: 0;
+	}
 }
 
 .checkbox+label {

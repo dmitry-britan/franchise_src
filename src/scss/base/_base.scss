@@ -12,6 +12,12 @@ body{
   font-size: 12px;
   line-height: 20px;
 }
+.row{
+  font-family: sans-serif;
+}
+.col{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .container{
   min-width: 320px;
   max-width: 1030px;
@@ -52,4 +58,10 @@ a{
   line-height: 21px;
   font-weight: 400;
   color: #000000;
+}
+.is--color-primary{
+  color: $color__primary;
+}
+.is--mb-40{
+  margin-bottom: 40px;
 }

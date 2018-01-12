@@ -21,20 +21,21 @@ block content
       .tabs.js-tabs
         .tabs__list
           .container
-            a(href="#general").tabs__list-item.js-tabs-item Основное
-            a(href="#cost").tabs__list-item.js-tabs-item.is--active Затраты
+            a(href="#general").tabs__list-item.js-tabs-item.is--active Основное
+            a(href="#cost").tabs__list-item.js-tabs-item Затраты
             a(href="#extra").tabs__list-item.js-tabs-item Дополнительно
             a(href="#media").tabs__list-item.js-tabs-item Мультимедиа
             a(href="#contacts").tabs__list-item.js-tabs-item Контакты
         .container
-          #general.tabs__content.js-tabs-content
+          #general.tabs__content.is--active.js-tabs-content
             include pug/parts/franchise-edit-general
-          #cost.tabs__content.is--active.js-tabs-content
+          #cost.tabs__content.js-tabs-content
             include pug/parts/franchise-edit-cost
           #extra.tabs__content.js-tabs-content
             include pug/parts/franchise-edit-extra
           #media.tabs__content.js-tabs-content
           #contacts.tabs__content.js-tabs-content
+            include pug/parts/franchise-edit-contacts
 
   include pug/section/advantage
   include pug/section/news

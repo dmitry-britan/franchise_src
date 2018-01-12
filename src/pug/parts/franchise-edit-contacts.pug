@@ -1,0 +1,67 @@
+form(action="").row.form.js-form-franchise-contracts
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Имя
+			input(type="text", name="owner_name").input
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label E-mail
+			input(type="text", name="email").input
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Телефон
+			input(type="text", name="phone").input
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Skype, Viber и т.п.
+			input(type="text", name="messanger").input
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		.is--mb-40
+			p.is--text-lg.is--color-primary
+				| + Города, в которых представлены объекты сети
+				br
+				| + Добавить человека
+
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Сайт 1
+			input(type="text", name="site_1").input
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Сайт 2
+			input(type="text", name="site_2").input
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Сайт 3
+			input(type="text", name="site_3").input
+	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+		.form__field
+			label.label Сайт 4
+			input(type="text", name="site_4").input
+
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		p 
+			strong Открытые контакты
+			
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		.form__field
+			span.checkbox__wrapper.is--no-marging
+				input(type="radio", name="opened", id="openedYes", value="1", checked).checkbox.is--small.is--right
+				label(for="openedYes") Да
+			span.checkbox__wrapper
+				input(type="radio", name="opened", id="openedNo", value="0").checkbox.is--small.is--right
+				label(for="openedNo") Нет
+		.form__field
+			p Нет — Это рекомендуемое значение. Чтобы открыть вашу контактную информацию, пользователю сайта необходимо пройти быструю регистрацию или войти через социальную сеть. Обычно это занимает несколько секунд, и позволяет вам отслеживать и сохранять данные пользователей, которые интересуются вашей франшизой.
+			p Да — Вашу контактную информацию (кроме e-mail) видят все посетители сайта без обязательной авторизации. Данная опция относится только к сайту franch.biz. Даже с открытыми контактами посетителю все равно нужно авторизоваться, чтобы написать вам сообщение или комментарий.
+	
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		hr.form__divider
+
+	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+		.form__action
+			button(type="submit").btn.btn--primary.btn--md Сохранить
