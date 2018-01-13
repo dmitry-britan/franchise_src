@@ -5,6 +5,7 @@
 }
 .list__item{
 	@include clearfix();
+	margin: 0;
 	padding: 5px 0;
 	font-size: 12px;
 	font-weight: 400;

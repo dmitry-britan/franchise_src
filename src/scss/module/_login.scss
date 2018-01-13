@@ -23,8 +23,7 @@
 }
 .login__item{
 	display: inline-block;
-	margin-left: 8px;
-	margin-right: 5px;
+	margin: 0 5px 0 8px;
 	font-size: 12px;
 	font-weight: 400;
 	color: $color__primary;
@@ -51,7 +50,9 @@
 	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
 	z-index: -1;
 }
-.login__profile-item{}
+.login__profile-item{
+	margin: 0;
+}
 .login__profile-link{
 	display: block;
 	padding: 4px 0;

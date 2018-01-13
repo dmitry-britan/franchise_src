@@ -1,0 +1,100 @@
+form(action="").form.row.js-form-franchise-general
+  .col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12.col--am
+    .form__upload
+      label(for='logotip').form__upload-img
+        img(src="images/choose-file.png", alt="", data-upload="logotip")
+      input#logotip.form__upload-file(type='file', name='logotip')
+  .col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12.col--am
+    .form__field
+      .is--text-lg Закачать новый логотип
+      p Здесь вы можете загрузить только файлы в форматах JPEG, PNG или GIF. Если ваш логотип в другом формате (к примеру, AI, CDR, EPS), пришлите его на адрес logo@franch.biz. Размер логотипа — не менее 180 x 120 px. Логотип не должен содержать посторонних изображений и надписей; в противном случае будет возвращена его исходная версия.
+      label(for='logotip').link Выбрать файл
+
+  .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+    hr.form__divider
+
+  .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+    .is--text-lg.is--mb-20.js-photos-qty 
+      | Фотографии (
+      span 19
+      | )
+    // media
+    .row
+      each i in [1,2,3,4,5,6]
+        .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
+          include media
+    // /media
+  .col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+    p
+      strong Требования к фотографиям:
+    ul
+      li Формат JPEG, размер файла не более 10 Мб
+      li Ширина — не менее 600 px, рекомендуемая — 1200 px
+      li Ваши конкурентные преимущества перед другими франшизами
+      li Важно: фотографии должны быть высокого качества, желательно постановочные, профессионально снятые и обработанные
+    p Фотографии, которые не соответствуют требованиям, будут удалены.
+  .col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
+    .form__field
+      p
+        strong Загрузить новые фотографии
+      p Вы можете разместить еще 21 фото. Файлы, загруженные сверх лимита, будут удалены автоматически.
+      .form__upload
+        label(for='photos').form__upload-img
+          img(src="images/choose-file.png", alt="", data-upload="photos")
+        input#photos.form__upload-file(type='file', name='photos')
+      p
+        label(for='photos').link Выбрать файл
+
+  .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+    hr.form__divider
+
+  .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+    .is--text-lg.is--mb-20 Обложка
+    img(src="images/cover.jpg", alt="").is--mb-20
+    p.is--text.is--mb-40
+      | Если вы хотите заменить обложку франшизы, пожалуйста, пришлите на адрес 
+      a(href="mailto: wallpaper@franch.biz") wallpaper@franch.biz
+      | одно или несколько изображений размером 1130 х 407 px. Обложка не должна содержать логотипов и текстовых надписей. Это может быть только качественная постановочная фотография, коллаж или фирменный паттерн. Желательно не помещать важные объекты в левой четверти обложки, т.к. в этой области будет находиться логотип и краткая информация о франшизе. Редакция может отклонить присланные макеты, если их качество и содержание не соответствуют правилам сайта.
+    .is--text-lg.is--mb-20 Фон страницы
+    p.is--text.is--mb-20
+      | Ваш platinum-аккаунт позволяет разместить индивидуальный фон на странице франшизы. Пожалуйста, пришлите на адрес 
+      a(href="mailto: wallpaper@franch.biz") wallpaper@franch.biz
+      | одно или несколько изображений размером 1920 х 1200 px. Так как на странице франшизы будет видна только правая и левая часть фона, размещайте важные объекты именно по бокам (по 385 px с каждой стороны), а не в центре изображения, т.к. центр будет скрыт основным контентом страницы. Изображение должно быть высокого качества.
+
+  .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+    hr.form__divider
+
+  .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+    .is--text-lg.is--mb-20.js-videos-qty 
+      | Видеоролики (
+      span 2
+      | )
+    // media
+    .row
+      each i in [1,2]
+        .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
+          include media
+    // /media
+  .col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
+    p
+      strong Правила размещения роликов:
+    ul
+      li Можно добавлять только ролики, размещенные на YouTube или Vimeo.
+      li Рекомендуем разместить ссылки на видеоролики, в которых рассказывается о вашей компании, франшизе, продукте или услуге. 
+      li Добавляйте ссылки на страницы с роликами, а не на свои каналы!
+    p Ссылки на ролики, которые не соответствуют правилам сайта или нарушают копирайт, будут удалены.
+  .col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
+    .form__field
+      p
+        strong Ссылки на видеоролики
+      p Вы можете добавить ссылки на еще 5 видео с YouTube или Vimeo. Ссылки, загруженные сверх лимита, будут удалены автоматически. Укажите по одной ссылке в каждой строке и нажмите кнопу «Добавить видео».
+      textarea(name="description", cols="30", rows="10").textarea.is--large-gamma
+      p
+        label(for='logotip').link Выбрать файл
+
+  .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+    hr.form__divider
+    
+  .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
+    .form__action
+      button(type="submit").btn.btn--primary.btn--md Сохранить
