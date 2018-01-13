@@ -101,26 +101,23 @@ if ($('.js-thumbs-slider').length) {
 	});
 }
 
-/* Get Device Width */
-function getWidth() {
-	if (self.innerWidth) {
-		return self.innerWidth;
-	}
+//
+// Tabs
+//---------------------------------------------------------------------------------------
+if ($('.js-tabs').length) {
+	var $tabs = $('.js-tabs-item');
+	var $panes = $('.js-tabs-content');
 
-	if (document.documentElement && document.documentElement.clientWidth) {
-		return document.documentElement.clientWidth;
-	}
+	$tabs.on('click', function(event) {
+		event.preventDefault();
 
-	if (document.body) {
-		return document.body.clientWidth;
-	}
-}
+		var id = $(event.currentTarget).attr('href');
 
-function dropdown(triger, menu) {
-	$(triger).hover(function(event) {
-		$(event.currentTarget).find(menu).stop(true, true).fadeIn(300);
-	}, function(event) {
-		$(event.currentTarget).find(menu).stop(true, true).fadeOut(150);
+		$tabs.removeClass('is--active');
+		$(event.currentTarget).addClass('is--active');
+
+		$panes.removeClass('is--active');
+		$(id).addClass('is--active');
 	});
 }
 
@@ -249,6 +246,41 @@ $('input[type=file]').on('change', function(event) {
 
 	showUploadThumb(event.currentTarget);
 });
+
+//
+// Валидация формы "Задать вопрос"
+// =================================================================
+var validateFormLogin = {
+	rules: {
+		email: {
+			required: true,
+			email: true
+		},
+		password: {
+			required: true
+		}
+	},
+	messages: {
+		email: {
+			email: 'Введите корректный e-mail адрес',
+			required: 'Введите Ваш e-mail'
+		},
+		password: {
+			required: 'Введите Ваш пароль'
+		}
+	},
+	submitHandler: function submitHandler(form) {
+		// ////////////////////
+		//  AJAX CODE GOES HERE
+		// ////////////////////
+		form.reset();
+	},
+	focusCleanup: true,
+	focusInvalid: false
+};
+
+// Login Form
+$('.js-form-login').validate(validateFormLogin);
 
 //
 // Валидация формы "Задать вопрос"
