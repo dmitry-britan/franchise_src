@@ -10,51 +10,62 @@ block content
     .container
       h2.section__title.is--align-left Мои данные
       .section__content
-        form(action="").form.row
+        form(action="").form.js-form-profile-data.row
           .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
             .form__upload.is--mb-40
               label(for='avatar').form__upload-img
                 img(src="images/upload.png", alt="", data-upload="avatar")
               input#avatar.form__upload-file(type='file', name='avatar')
               label(for='avatar').form__upload-label Изменить фото
+
           .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
             .form__field.is--required
               label.label Имя и фамилия
-              input(type="text").input
+              input(type="text", name="name").input
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+            .form__field.form__field--select.is--required
+              label.label Тип аккаунта
+              select(name="account").select
+                option(value="1") Продавец франшизы
+                option(value="2") Покупатель франшизы
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
             .form__field
               label.label Дата рождения
-              input(type="text").input
-            .form__field.is--required
-              label.label E-mail
-              input(type="email").input
-            .form__field
-              label.label Телефон
-              input(type="text").input
-            .form__field.is--required
-              label.label Страна
-              input(type="text").input
+              input(type="text" name="birthday").input
           .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
-            .form__field.is--required
-              label.label Тип аккаунта
-              input(type="text").input
             .form__field
               label.label Пол
-              input(type="text").input
+              input(type="text", name="gender").input
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+            .form__field.is--required
+              label.label E-mail
+              input(type="email", name="email").input
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
             .form__field
               label.label Сайт
-              input(type="text").input
+              input(type="text", name="site").input
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+            .form__field
+              label.label Телефон
+              input(type="text", name="phone").input
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
             .form__field
               label.label Skype
-              input(type="text").input
+              input(type="text", name="skype").input
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
+            .form__field.is--required
+              label.label Страна
+              input(type="text", name="country").input
+          .col.col--6-of-12.col--s-12-of-12.col--m-6-of-12.col--l-6-of-12
             .form__field.is--required
               label.label Город
-              input(type="text").input
+              input(type="text", name="city").input
           .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
             .form__field
               label.label Обо мне
-              textarea(name="", cols="30", rows="10").textarea
+              textarea(name="about", cols="30", rows="10").textarea
             .form__action
-              button(type="submit").btn.btn--primary.btn--md Все популярные франшизы
+              button(type="submit").btn.btn--primary.btn--md Сохранить
 
   include pug/section/advantage
   include pug/section/news
