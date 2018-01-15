@@ -108,6 +108,7 @@
 }
 .franchise__properties-item{
 	padding: 13px 0;
+	margin: 0;
 	border-bottom: 1px solid #dedede;
 	@include clearfix();
 	&:first-child{

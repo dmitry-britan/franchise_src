@@ -45,3 +45,45 @@ div(style='display: none;')
 						input(type="text", name="phone").input
 					.form__action
 						button(type="submit").btn.btn--primary.btn--md Отправить
+						
+	#question.popup
+		.popup__close.arcticmodal-close
+		.popup__inner
+			h4.popup__header Задать вопрос
+			.popup__body
+				form(action="").form.js-form-question
+					.form__field.is--required
+						label.label Имя
+						input(type="text", name="name").input
+					.form__field.is--required
+						label.label Вопрос
+						textarea(name="question", cols="30", rows="10").textarea
+					.form__action
+						button(type="submit").btn.btn--primary.btn--md Отправить
+						
+	#answer.popup
+		.popup__close.arcticmodal-close
+		.popup__inner.is--wide
+			h4.popup__header Ответить на сообщение
+			.popup__body
+				form(action="").form.js-form-answer
+					.form__field.is--required
+						label.label Сообщение
+						textarea(name="answer", cols="30", rows="10").textarea
+					.form__action
+						button(type="submit").btn.btn--primary.btn--md Отправить
+						
+	#login.popup
+		.popup__close.arcticmodal-close
+		.popup__inner.is--wide
+			h4.popup__header Войти
+			.popup__body
+				form(action="").form.js-form-login
+					.form__field.is--required
+						label.label Ваш e-mail
+						input(type="text", name="email").input
+					.form__field.is--required
+						label.label Пароль
+						input(type="password", name="password").input
+					.form__action
+						button(type="submit").btn.btn--primary.btn--md Отправить

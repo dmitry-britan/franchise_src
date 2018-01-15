@@ -21,6 +21,9 @@
 	width: 566px;
 	padding: 55px;
 	background-color: #ffffff;
+	&.is--wide{
+		width: 960px;
+	}
 }
 .popup__header{
 	margin: 0 0 42px;
