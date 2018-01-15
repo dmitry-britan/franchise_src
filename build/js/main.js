@@ -324,6 +324,66 @@ var validateFormAsk = {
 $('.js-form-ask').validate(validateFormAsk);
 
 //
+// Валидация формы "Задать вопрос"
+// =================================================================
+var validateFormQuestion = {
+	rules: {
+		name: {
+			required: true
+		},
+		question: {
+			required: true
+		}
+	},
+	messages: {
+		name: {
+			required: 'Введите Ваше имя'
+		},
+		question: {
+			required: 'Введите Ваш вопрос'
+		}
+	},
+	submitHandler: function submitHandler(form) {
+		// ////////////////////
+		//  AJAX CODE GOES HERE
+		// ////////////////////
+		form.reset();
+	},
+	focusCleanup: true,
+	focusInvalid: false
+};
+
+// QUESTION FORM
+$('.js-form-question').validate(validateFormQuestion);
+
+//
+// Валидация формы "Ответить на сообщение"
+// =================================================================
+var validateFormAnswer = {
+	rules: {
+		answer: {
+			required: true
+		}
+	},
+	messages: {
+		answer: {
+			required: 'Введите Ваше сообщение'
+		}
+	},
+	submitHandler: function submitHandler(form) {
+		// ////////////////////
+		//  AJAX CODE GOES HERE
+		// ////////////////////
+		form.reset();
+	},
+	focusCleanup: true,
+	focusInvalid: false
+};
+
+// ANSWER FORM
+$('.js-form-answer').validate(validateFormAnswer);
+
+//
 // Валидация формы "Заказать обратный звонок"
 // =================================================================
 var validateFormCallback = {
@@ -384,6 +444,56 @@ var validateFormRegistration = {
 
 // REGISTRATION FORM
 $('.js-form-registration').validate(validateFormRegistration);
+
+//
+// Валидация формы "Задать вопрос"
+// =================================================================
+var validateFormProfileData = {
+	rules: {
+		email: {
+			required: true,
+			email: true
+		},
+		name: {
+			required: true
+		},
+		city: {
+			required: true
+		},
+		country: {
+			required: true
+		},
+		account: {
+			required: true
+		}
+	},
+	messages: {
+		email: {
+			email: 'Введите корректный e-mail адрес',
+			required: 'Введите Ваш e-mail'
+		},
+		name: {
+			required: 'Введите Ваше имя'
+		},
+		city: {
+			required: 'Введите Ваш город'
+		},
+		country: {
+			required: 'Введите Вашу страну'
+		}
+	},
+	submitHandler: function submitHandler(form) {
+		// ////////////////////
+		//  AJAX CODE GOES HERE
+		// ////////////////////
+		form.reset();
+	},
+	focusCleanup: true,
+	focusInvalid: false
+};
+
+// ProfileData Form
+$('.js-form-profile-data').validate(validateFormProfileData);
 
 //
 // Подключаем fancybox для фото товара

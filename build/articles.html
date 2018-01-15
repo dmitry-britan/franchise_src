@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1515823843064">
+    <link rel="stylesheet" href="css/main.css?v=1516027183163">
   </head>
   <body>
     <header class="header">
@@ -96,7 +96,7 @@
             <div class="article__inner">
               <div class="article__photo"><img src="images/article.jpg" alt=""></div>
               <div class="article__content">
-                <h3 class="article__title"><a href="">Общие сведения</a></h3>
+                <h3 class="article__title"><a href="post.html">Общие сведения</a></h3>
                 <p class="article__text">Третейские суды не входят в систему судов общей юрисдикции. Однако, это обстоятельство не лишает лиц права обращаться к ним за разрешением споров. Решения третейских судов являются окончательными и подлежат обязательному исполнению.</p>
               </div>
             </div>
@@ -105,7 +105,7 @@
             <div class="article__inner">
               <div class="article__photo"><img src="images/article.jpg" alt=""></div>
               <div class="article__content">
-                <h3 class="article__title"><a href="">Постоянно действующий третейский суд при Киевской торгово-промышленной палате</a></h3>
+                <h3 class="article__title"><a href="post.html">Постоянно действующий третейский суд при Киевской торгово-промышленной палате</a></h3>
                 <p class="article__text">Третейские суды не входят в систему судов общей юрисдикции. Однако, это обстоятельство не лишает лиц права обращаться к ним за разрешением споров. Решения третейских судов являются окончательными и подлежат обязательному исполнению.</p>
               </div>
             </div>
@@ -114,7 +114,7 @@
             <div class="article__inner">
               <div class="article__photo"><img src="images/article.jpg" alt=""></div>
               <div class="article__content">
-                <h3 class="article__title"><a href="">Руководство Постоянно действующего третейского суда</a></h3>
+                <h3 class="article__title"><a href="post.html">Руководство Постоянно действующего третейского суда</a></h3>
                 <p class="article__text">Третейские суды не входят в систему судов общей юрисдикции. Однако, это обстоятельство не лишает лиц права обращаться к ним за разрешением споров. Решения третейских судов являются окончательными и подлежат обязательному исполнению.</p>
               </div>
             </div>
@@ -123,7 +123,7 @@
             <div class="article__inner">
               <div class="article__photo"><img src="images/article.jpg" alt=""></div>
               <div class="article__content">
-                <h3 class="article__title"><a href="">Третейский суд</a></h3>
+                <h3 class="article__title"><a href="post.html">Третейский суд</a></h3>
                 <p class="article__text">Третейские суды не входят в систему судов общей юрисдикции. Однако, это обстоятельство не лишает лиц права обращаться к ним за разрешением споров. Решения третейских судов являются окончательными и подлежат обязательному исполнению.</p>
               </div>
             </div>
@@ -132,7 +132,7 @@
             <div class="article__inner">
               <div class="article__photo"><img src="images/article.jpg" alt=""></div>
               <div class="article__content">
-                <h3 class="article__title"><a href="">Третейский суд</a></h3>
+                <h3 class="article__title"><a href="post.html">Третейский суд</a></h3>
                 <p class="article__text">Третейские суды не входят в систему судов общей юрисдикции. Однако, это обстоятельство не лишает лиц права обращаться к ним за разрешением споров. Решения третейских судов являются окончательными и подлежат обязательному исполнению.</p>
               </div>
             </div>
@@ -238,8 +238,67 @@
           </div>
         </div>
       </div>
+      <div class="popup" id="question">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner">
+          <h4 class="popup__header">Задать вопрос</h4>
+          <div class="popup__body">
+            <form class="form js-form-question" action="">
+              <div class="form__field is--required">
+                <label class="label">Имя</label>
+                <input class="input" type="text" name="name">
+              </div>
+              <div class="form__field is--required">
+                <label class="label">Вопрос</label>
+                <textarea class="textarea" name="question" cols="30" rows="10"></textarea>
+              </div>
+              <div class="form__action">
+                <button class="btn btn--primary btn--md" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="answer">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner is--wide">
+          <h4 class="popup__header">Ответить на сообщение</h4>
+          <div class="popup__body">
+            <form class="form js-form-answer" action="">
+              <div class="form__field is--required">
+                <label class="label">Сообщение</label>
+                <textarea class="textarea" name="answer" cols="30" rows="10"></textarea>
+              </div>
+              <div class="form__action">
+                <button class="btn btn--primary btn--md" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="login">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner is--wide">
+          <h4 class="popup__header">Войти</h4>
+          <div class="popup__body">
+            <form class="form js-form-login" action="">
+              <div class="form__field is--required">
+                <label class="label">Ваш e-mail</label>
+                <input class="input" type="text" name="email">
+              </div>
+              <div class="form__field is--required">
+                <label class="label">Пароль</label>
+                <input class="input" type="password" name="password">
+              </div>
+              <div class="form__action">
+                <button class="btn btn--primary btn--md" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="js/vendor.js?v=1515823843065"></script>
-    <script src="js/main.js?v=1515823843065"></script>
+    <script src="js/vendor.js?v=1516027183164"></script>
+    <script src="js/main.js?v=1516027183164"></script>
   </body>
 </html>

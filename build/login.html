@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1515823847030">
+    <link rel="stylesheet" href="css/main.css?v=1516027187407">
   </head>
   <body>
     <header class="header">
@@ -144,17 +144,17 @@
           <div class="row">
             <div class="col col--6-of-12 col--s-12-of-12 col--m-6-of-12 col--l-6-of-12">
               <article class="news">
-                <div class="news__inner"><a class="news__photo" href=""><img src="images/news/n-1.jpg" alt=""></a>
+                <div class="news__inner"><a class="news__photo" href="post.html"><img src="images/news/n-1.jpg" alt=""></a>
                   <div class="news__date">28.12.17</div>
-                  <h3 class="news__title"><a href="">Товарищи! рамки и место обучения кадров позволяет оценить значение модели развития.</a></h3>
+                  <h3 class="news__title"><a href="post.html">Товарищи! рамки и место обучения кадров позволяет оценить значение модели развития.</a></h3>
                 </div>
               </article>
             </div>
             <div class="col col--6-of-12 col--s-12-of-12 col--m-6-of-12 col--l-6-of-12">
               <article class="news">
-                <div class="news__inner"><a class="news__photo" href=""><img src="images/news/n-2.jpg" alt=""></a>
+                <div class="news__inner"><a class="news__photo" href="post.html"><img src="images/news/n-2.jpg" alt=""></a>
                   <div class="news__date">28.12.17</div>
-                  <h3 class="news__title"><a href="">Товарищи! рамки и место обучения кадров позволяет оценить значение модели развития.</a></h3>
+                  <h3 class="news__title"><a href="post.html">Товарищи! рамки и место обучения кадров позволяет оценить значение модели развития.</a></h3>
                 </div>
               </article>
             </div>
@@ -257,8 +257,67 @@
           </div>
         </div>
       </div>
+      <div class="popup" id="question">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner">
+          <h4 class="popup__header">Задать вопрос</h4>
+          <div class="popup__body">
+            <form class="form js-form-question" action="">
+              <div class="form__field is--required">
+                <label class="label">Имя</label>
+                <input class="input" type="text" name="name">
+              </div>
+              <div class="form__field is--required">
+                <label class="label">Вопрос</label>
+                <textarea class="textarea" name="question" cols="30" rows="10"></textarea>
+              </div>
+              <div class="form__action">
+                <button class="btn btn--primary btn--md" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="answer">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner is--wide">
+          <h4 class="popup__header">Ответить на сообщение</h4>
+          <div class="popup__body">
+            <form class="form js-form-answer" action="">
+              <div class="form__field is--required">
+                <label class="label">Сообщение</label>
+                <textarea class="textarea" name="answer" cols="30" rows="10"></textarea>
+              </div>
+              <div class="form__action">
+                <button class="btn btn--primary btn--md" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="login">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner is--wide">
+          <h4 class="popup__header">Войти</h4>
+          <div class="popup__body">
+            <form class="form js-form-login" action="">
+              <div class="form__field is--required">
+                <label class="label">Ваш e-mail</label>
+                <input class="input" type="text" name="email">
+              </div>
+              <div class="form__field is--required">
+                <label class="label">Пароль</label>
+                <input class="input" type="password" name="password">
+              </div>
+              <div class="form__action">
+                <button class="btn btn--primary btn--md" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="js/vendor.js?v=1515823847032"></script>
-    <script src="js/main.js?v=1515823847032"></script>
+    <script src="js/vendor.js?v=1516027187409"></script>
+    <script src="js/main.js?v=1516027187409"></script>
   </body>
 </html>
