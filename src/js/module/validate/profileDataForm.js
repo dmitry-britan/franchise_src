@@ -35,12 +35,6 @@ let validateFormProfileData = {
 			required: 'Введите Вашу страну',
 		},
 	},
-	submitHandler: (form) => {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
-	},
 	focusCleanup: true,
 	focusInvalid: false,
 };

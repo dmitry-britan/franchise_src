@@ -18,12 +18,6 @@ let validateFormQuestion = {
 			required: 'Введите Ваш вопрос',
 		},
 	},
-	submitHandler: (form) => {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
-	},
 	focusCleanup: true,
 	focusInvalid: false,
 };

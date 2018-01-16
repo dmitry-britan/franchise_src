@@ -12,12 +12,6 @@ let validateFormCallback = {
 			required: 'Введите Ваше имя',
 		},
 	},
-	submitHandler: (form) => {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
-	},
 	focusCleanup: true,
 	focusInvalid: false,
 };

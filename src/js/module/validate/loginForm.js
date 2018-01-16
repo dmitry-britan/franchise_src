@@ -20,12 +20,6 @@ let validateFormLogin = {
 			required: 'Введите Ваш пароль',
 		},
 	},
-	submitHandler: (form) => {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
-	},
 	focusCleanup: true,
 	focusInvalid: false,
 };
