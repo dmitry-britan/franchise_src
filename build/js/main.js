@@ -269,12 +269,6 @@ var validateFormLogin = {
 			required: 'Введите Ваш пароль'
 		}
 	},
-	submitHandler: function submitHandler(form) {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
-	},
 	focusCleanup: true,
 	focusInvalid: false
 };
@@ -310,12 +304,6 @@ var validateFormAsk = {
 			required: 'Введите Ваше сообщение'
 		}
 	},
-	submitHandler: function submitHandler(form) {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
-	},
 	focusCleanup: true,
 	focusInvalid: false
 };
@@ -343,12 +331,6 @@ var validateFormQuestion = {
 			required: 'Введите Ваш вопрос'
 		}
 	},
-	submitHandler: function submitHandler(form) {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
-	},
 	focusCleanup: true,
 	focusInvalid: false
 };
@@ -370,12 +352,6 @@ var validateFormAnswer = {
 			required: 'Введите Ваше сообщение'
 		}
 	},
-	submitHandler: function submitHandler(form) {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
-	},
 	focusCleanup: true,
 	focusInvalid: false
 };
@@ -396,12 +372,6 @@ var validateFormCallback = {
 		name: {
 			required: 'Введите Ваше имя'
 		}
-	},
-	submitHandler: function submitHandler(form) {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
 	},
 	focusCleanup: true,
 	focusInvalid: false
@@ -481,12 +451,6 @@ var validateFormProfileData = {
 		country: {
 			required: 'Введите Вашу страну'
 		}
-	},
-	submitHandler: function submitHandler(form) {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
 	},
 	focusCleanup: true,
 	focusInvalid: false
