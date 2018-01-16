@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1516027185521">
+    <link rel="stylesheet" href="css/main.css?v=1516109161102">
   </head>
   <body>
     <header class="header">
@@ -525,12 +525,12 @@
                   <div class="is--text-lg is--mb-20 js-photos-qty">
                      Фотографии (<span>19</span>)</div>
                   <!-- media-->
-                  <div class="row">
+                  <div class="row" id="filePhotosList">
                     <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
                       <div class="media">
                         <div class="media__inner">
                           <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action"><span>Удалить</span><i class="icon icon-close-white"></i></div>
+                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
                         </div>
                       </div>
                     </div>
@@ -538,7 +538,7 @@
                       <div class="media">
                         <div class="media__inner">
                           <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action"><span>Удалить</span><i class="icon icon-close-white"></i></div>
+                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
                         </div>
                       </div>
                     </div>
@@ -546,7 +546,7 @@
                       <div class="media">
                         <div class="media__inner">
                           <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action"><span>Удалить</span><i class="icon icon-close-white"></i></div>
+                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
                         </div>
                       </div>
                     </div>
@@ -554,7 +554,7 @@
                       <div class="media">
                         <div class="media__inner">
                           <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action"><span>Удалить</span><i class="icon icon-close-white"></i></div>
+                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
                         </div>
                       </div>
                     </div>
@@ -562,7 +562,7 @@
                       <div class="media">
                         <div class="media__inner">
                           <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action"><span>Удалить</span><i class="icon icon-close-white"></i></div>
+                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
                         </div>
                       </div>
                     </div>
@@ -570,7 +570,7 @@
                       <div class="media">
                         <div class="media__inner">
                           <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action"><span>Удалить</span><i class="icon icon-close-white"></i></div>
+                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
                         </div>
                       </div>
                     </div>
@@ -593,7 +593,7 @@
                     <p>Вы можете разместить еще 21 фото. Файлы, загруженные сверх лимита, будут удалены автоматически.</p>
                     <div class="form__upload">
                       <label class="form__upload-img" for="photos"><img src="images/choose-file.png" alt="" data-upload="photos"></label>
-                      <input class="form__upload-file" id="photos" type="file" name="photos">
+                      <input class="form__upload-file js-media-file" id="photos" type="file" name="photos" multiple accept="image/*" onchange="handleFiles(this.files)">
                     </div>
                     <p>
                       <label class="link" for="photos">Выбрать файл</label>
@@ -621,7 +621,7 @@
                       <div class="media">
                         <div class="media__inner">
                           <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action"><span>Удалить</span><i class="icon icon-close-white"></i></div>
+                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
                         </div>
                       </div>
                     </div>
@@ -629,7 +629,7 @@
                       <div class="media">
                         <div class="media__inner">
                           <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action"><span>Удалить</span><i class="icon icon-close-white"></i></div>
+                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
                         </div>
                       </div>
                     </div>
@@ -923,9 +923,10 @@
               <div class="form__field is--required">
                 <label class="label">Сообщение</label>
                 <textarea class="textarea" name="answer" cols="30" rows="10"></textarea>
+                <input type="hidden" name="dialog_id">
               </div>
               <div class="form__action">
-                <button class="btn btn--primary btn--md" type="submit">Отправить</button>
+                <button class="btn btn--primary btn--md" type="submit">Отправить</button><span class="note note--success is--ml-20">Сообщение отправлено, успешно!</span>
               </div>
             </form>
           </div>
@@ -953,7 +954,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1516027185525"></script>
-    <script src="js/main.js?v=1516027185525"></script>
+    <script src="js/vendor.js?v=1516109161105"></script>
+    <script src="js/main.js?v=1516109161105"></script>
   </body>
 </html>
