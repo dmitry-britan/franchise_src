@@ -57,6 +57,9 @@
 	}
 	.section__content{
 		margin: 0 -45px;
+		@include media('<1200px'){
+			margin: 0;
+		}
 	}
 }
 .section--functions{

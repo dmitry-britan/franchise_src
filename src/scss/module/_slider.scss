@@ -1,23 +1,25 @@
 .slider{
   position: relative;
-  &:after{
-    content: '';
-    position: absolute;
-    left: 0; bottom: -106px;
-    width: 651px;
-    height: 686px;
-    background:url('../images/slider-bg-left-bottom.png') 0 0 no-repeat;
-    z-index: -1;
-  }
-  &:before{
-    content: '';
-    position: absolute;
-    right: 0; bottom: -88px;
-    width: 566px;
-    height: 636px;
-    background:url('../images/slider-bg-right-bottom.png') 0 0 no-repeat;
-    z-index: -1;
-  }
+
+  // &:after{
+  //   content: '';
+  //   position: absolute;
+  //   left: 0; bottom: -106px;
+  //   width: 651px;
+  //   height: 686px;
+  //   background:url('../images/slider-bg-left-bottom.png') 0 0 no-repeat;
+  //   z-index: -1;
+  // }
+  // &:before{
+  //   content: '';
+  //   position: absolute;
+  //   right: 0; bottom: -88px;
+  //   width: 566px;
+  //   height: 636px;
+  //   background:url('../images/slider-bg-right-bottom.png') 0 0 no-repeat;
+  //   z-index: -1;
+  // }
+
 }
 .slider__item{
   position: relative;
