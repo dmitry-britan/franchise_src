@@ -17,8 +17,8 @@ header.header
 							.login.is--logged
 								a(href="").login__item Профиль
 								ul.login__profile
-									-var items = ["Моя страница (ID 29579)","Мои сообщения","Моя франшиза","Продлить франшизу","Популярность франшиз","Избранные франшизы","Мои данные","Выйти"];
-									-var links = ["profile.html","profile-messages.html","profile-franchise.html","profile-payments.html","","profile-favorites.html","profile-data.html",""]
+									-var items = ["Членство","Моя страница (ID 29579)","Мои сообщения","Моя франшиза","Продлить франшизу","Популярность франшиз","Избранные франшизы","Выйти"];
+									-var links = ["membership.html","profile-data.html","profile-messages.html","profile-franchise.html","profile-payments.html","","profile-favorites.html",""]
 									each item, i in items
 										li.login__profile-item
 											a(href=links[i]).login__profile-link= item
@@ -26,8 +26,8 @@ header.header
 							.login.is--logged
 								a(href="").login__item Профиль
 								ul.login__profile
-									-var items = ["Моя страница (ID 68239)","Мои сообщения","Избранные франшизы","Мои данные","Выйти"];
-									-var links = ["profile.html","profile-messages.html","profile-favorites.html","profile-data.html",""]
+									-var items = ["Членство","Моя страница (ID 68239)","Мои сообщения","Избранные франшизы","Выйти"];
+									-var links = ["membership.html","profile-data.html","profile-messages.html","profile-favorites.html",""]
 									each item, i in items
 										li.login__profile-item
 											a(href=links[i]).login__profile-link= item
@@ -52,11 +52,11 @@ header.header
 			nav.nav
 				ul.nav__list
 					li.nav__item
+						a(href="about.html").nav__link Об ассоциации
+					li.nav__item
 						a(href="").nav__link Развиваю франшизу
 					li.nav__item
 						a(href="").nav__link Ищу франшизу
-					li.nav__item
-						a(href="about.html").nav__link Об ассоциации
 					li.nav__item
 						a(href="catalog.html").nav__link Каталог франшиз
 						//- submenu
@@ -103,8 +103,6 @@ header.header
 								li.nav__submenu-item
 									a(href="catalog.html").nav__submenu-link Финансовые услуги
 						//- /submenu
-					li.nav__item
-						a(href="membership.html").nav__link Членство для франчайзеров
 					li.nav__item
 						a(href="articles.html").nav__link Третейский суд
 					li.nav__item
