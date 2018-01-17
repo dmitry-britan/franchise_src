@@ -19,7 +19,7 @@ form(action="").form.row.js-form-franchise-general
       span 19
       | )
     // media
-    .row
+    .row#filePhotosList
       each i in [1,2,3,4,5,6]
         .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
           include media
@@ -41,7 +41,7 @@ form(action="").form.row.js-form-franchise-general
       .form__upload
         label(for='photos').form__upload-img
           img(src="images/choose-file.png", alt="", data-upload="photos")
-        input#photos.form__upload-file(type='file', name='photos')
+        input#photos.form__upload-file.js-media-file(type='file', name='photos', multiple accept="image/*", onchange="handleFiles(this.files)")
       p
         label(for='photos').link Выбрать файл
 

@@ -42,3 +42,32 @@ block content
   include pug/section/news
 
 block body-end
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js")
+  script.
+    //
+    // Обработка элемента формы input[type=file].js-media-file
+    // =================================================================
+    window.URL = window.URL || window.webkitURL;
+
+    var photosLink = [];
+    function handleFiles(files) {
+      photosLink = [];
+      if (files.length) {
+        for (var i = 0; i < files.length; i++) {
+          var img = document.createElement('img');
+
+          img.src = window.URL.createObjectURL(files[i]);
+          photosLink.push(img.src);
+        }
+
+        if (photosLink.length){
+          var photoMedia = _.template($('#photoMedia').html());
+
+          // render the template
+          $('#filePhotosList').html(photoMedia(photosLink));
+        }
+      }
+    }
+
+  script(type="text/html", id="photoMedia")
+    include js/template/mediaPhoto.template

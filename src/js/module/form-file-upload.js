@@ -14,7 +14,7 @@ function showUploadThumb(input) {
 		reader.readAsDataURL(input.files[0]);
 	}
 }
-$('input[type=file]').on('change', (event) => {
+$('input[type=file]').not('.js-media-file').on('change', (event) => {
 	let str = $(event.currentTarget).val();
 	let $label = $(event.currentTarget).next();
 	let labelText = $label.text();
