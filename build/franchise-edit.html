@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1516109161102">
+    <link rel="stylesheet" href="css/main.css?v=1516183722713">
   </head>
   <body>
     <header class="header">
@@ -26,13 +26,13 @@
             <div class="header__login">
               <div class="login is--logged"><a class="login__item" href="">Профиль</a>
                 <ul class="login__profile">
-                  <li class="login__profile-item"><a class="login__profile-link" href="profile.html">Моя страница (ID 29579)</a></li>
+                  <li class="login__profile-item"><a class="login__profile-link" href="membership.html">Членство</a></li>
+                  <li class="login__profile-item"><a class="login__profile-link" href="profile-data.html">Моя страница (ID 29579)</a></li>
                   <li class="login__profile-item"><a class="login__profile-link" href="profile-messages.html">Мои сообщения</a></li>
                   <li class="login__profile-item"><a class="login__profile-link" href="profile-franchise.html">Моя франшиза</a></li>
                   <li class="login__profile-item"><a class="login__profile-link" href="profile-payments.html">Продлить франшизу</a></li>
                   <li class="login__profile-item"><a class="login__profile-link" href="">Популярность франшиз</a></li>
                   <li class="login__profile-item"><a class="login__profile-link" href="profile-favorites.html">Избранные франшизы</a></li>
-                  <li class="login__profile-item"><a class="login__profile-link" href="profile-data.html">Мои данные</a></li>
                   <li class="login__profile-item"><a class="login__profile-link" href="">Выйти</a></li>
                 </ul>
               </div>
@@ -55,9 +55,9 @@
         <div class="container">
           <nav class="nav">
             <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="about.html">Об ассоциации</a></li>
               <li class="nav__item"><a class="nav__link" href="">Развиваю франшизу</a></li>
               <li class="nav__item"><a class="nav__link" href="">Ищу франшизу</a></li>
-              <li class="nav__item"><a class="nav__link" href="about.html">Об ассоциации</a></li>
               <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог франшиз</a>
                 <div class="nav__submenu">
                   <ul class="nav__submenu-list">
@@ -87,7 +87,6 @@
                   </ul>
                 </div>
               </li>
-              <li class="nav__item"><a class="nav__link" href="membership.html">Членство для франчайзеров</a></li>
               <li class="nav__item"><a class="nav__link" href="articles.html">Третейский суд</a></li>
               <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
             </ul>
@@ -954,7 +953,46 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1516109161105"></script>
-    <script src="js/main.js?v=1516109161105"></script>
+    <script src="js/vendor.js?v=1516183722717"></script>
+    <script src="js/main.js?v=1516183722717"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script>
+      //
+      // Обработка элемента формы input[type=file].js-media-file
+      // =================================================================
+      window.URL = window.URL || window.webkitURL;
+      
+      var photosLink = [];
+      function handleFiles(files) {
+        photosLink = [];
+        if (files.length) {
+          for (var i = 0; i < files.length; i++) {
+            var img = document.createElement('img');
+      
+            img.src = window.URL.createObjectURL(files[i]);
+            photosLink.push(img.src);
+          }
+      
+          if (photosLink.length){
+            var photoMedia = _.template($('#photoMedia').html());
+      
+            // render the template
+            $('#filePhotosList').html(photoMedia(photosLink));
+          }
+        }
+      }
+      
+    </script>
+    <script type="text/html" id="photoMedia"><% _.forEach(photosLink, function(photoLink) { %>
+	<div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
+		<div class="media">
+			<div class="media__inner">
+				<div class="media__cover"><img src="<%- photoLink %>" alt=""/></div>
+				<div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
+			</div>
+		</div>
+	</div>
+<% }); %>
+    </script>
   </body>
 </html>

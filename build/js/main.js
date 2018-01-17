@@ -224,7 +224,7 @@ function showUploadThumb(input) {
 		reader.readAsDataURL(input.files[0]);
 	}
 }
-$('input[type=file]').on('change', function(event) {
+$('input[type=file]').not('.js-media-file').on('change', function(event) {
 	var str = $(event.currentTarget).val();
 	var $label = $(event.currentTarget).next();
 	var labelText = $label.text();
