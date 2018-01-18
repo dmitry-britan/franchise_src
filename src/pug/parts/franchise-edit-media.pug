@@ -1,4 +1,4 @@
-form(action="").form.row.js-form-franchise-general
+form#fileupload(method='POST', enctype='multipart/form-data').form.row.js-form-franchise-general
   .col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12.col--am
     .form__upload
       label(for='logotip').form__upload-img
@@ -14,16 +14,14 @@ form(action="").form.row.js-form-franchise-general
     hr.form__divider
 
   .col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
-    .is--text-lg.is--mb-20.js-photos-qty 
+    .is--text-lg.is--mb-20 
       | Фотографии (
-      span 19
+      span.js-photos-qty 19
       | )
     // media
     .row#filePhotosList
-      each i in [1,2,3,4,5,6]
-        .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
-          include media
-    // /media
+      // The table listing the files available for upload/download
+      .files(role='presentation')
   .col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
     p
       strong Требования к фотографиям:
@@ -33,15 +31,17 @@ form(action="").form.row.js-form-franchise-general
       li Ваши конкурентные преимущества перед другими франшизами
       li Важно: фотографии должны быть высокого качества, желательно постановочные, профессионально снятые и обработанные
     p Фотографии, которые не соответствуют требованиям, будут удалены.
+
   .col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
     .form__field
       p
         strong Загрузить новые фотографии
       p Вы можете разместить еще 21 фото. Файлы, загруженные сверх лимита, будут удалены автоматически.
-      .form__upload
+      // The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload
+      .fileupload-buttonbar.form__upload
         label(for='photos').form__upload-img
           img(src="images/choose-file.png", alt="", data-upload="photos")
-        input#photos.form__upload-file.js-media-file(type='file', name='photos', multiple accept="image/*", onchange="handleFiles(this.files)")
+        input(type='file', name='files[]', multiple='')#photos.form__upload-file.js-media-file
       p
         label(for='photos').link Выбрать файл
 

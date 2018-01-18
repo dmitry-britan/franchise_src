@@ -98,3 +98,14 @@ li {
 .is--mb-40{
   margin-bottom: 40px;
 }
+.as-table{
+  display: table;
+  width: 100%;
+}
+.as-table__row{
+  display: table-row;
+}
+.as-table__cell{
+  display: table-cell;
+  vertical-align: top;
+}

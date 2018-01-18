@@ -21,19 +21,19 @@ block content
       .tabs.js-tabs
         .tabs__list
           .container
-            a(href="#general").tabs__list-item.js-tabs-item.is--active Основное
+            a(href="#general").tabs__list-item.js-tabs-item Основное
             a(href="#cost").tabs__list-item.js-tabs-item Затраты
             a(href="#extra").tabs__list-item.js-tabs-item Дополнительно
-            a(href="#media").tabs__list-item.js-tabs-item Мультимедиа
+            a(href="#media").tabs__list-item.js-tabs-item.is--active Мультимедиа
             a(href="#contacts").tabs__list-item.js-tabs-item Контакты
         .container
-          #general.tabs__content.is--active.js-tabs-content
+          #general.tabs__content.js-tabs-content
             include pug/parts/franchise-edit-general
           #cost.tabs__content.js-tabs-content
             include pug/parts/franchise-edit-cost
           #extra.tabs__content.js-tabs-content
             include pug/parts/franchise-edit-extra
-          #media.tabs__content.js-tabs-content
+          #media.tabs__content.js-tabs-content.is--active
             include pug/parts/franchise-edit-media
           #contacts.tabs__content.js-tabs-content
             include pug/parts/franchise-edit-contacts
@@ -42,32 +42,91 @@ block content
   include pug/section/news
 
 block body-end
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js")
-  script.
-    //
-    // Обработка элемента формы input[type=file].js-media-file
-    // =================================================================
-    window.URL = window.URL || window.webkitURL;
+  // Bootstrap Progressbar styles
+  link(rel='stylesheet', href='css/static/bootstrap-progressbar.css')
+  // CSS to style the file input field as button and adjust the Bootstrap progress bars
+  link(rel='stylesheet', href='css/static/jquery.fileupload.css')
+  link(rel='stylesheet', href='css/static/jquery.fileupload-ui.css')
 
-    var photosLink = [];
-    function handleFiles(files) {
-      photosLink = [];
-      if (files.length) {
-        for (var i = 0; i < files.length; i++) {
-          var img = document.createElement('img');
+  // The template to display files available for upload
+  script#template-upload(type='text/x-tmpl').
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+      <div class="template-upload col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
+        <div class="media">
+          <div class="media__inner">
+            <div class="media__cover">
+              <span class="preview"></span>
+            </div>
+            
+            <div class="media__action">
+              <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+              <div>
+                {% if (!i && !o.options.autoUpload) { %}
+                  <button class="start" disabled>
+                    <span>Загрузить</span><i class="fa fa-download"></i>
+                  </button>
+                {% } %}
+                {% if (!i) { %}
+                  <button class="cancel">
+                    <span>Удалить</span><i class="icon icon-close-white"></i>
+                  </button>
+                {% } %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% } %}
+    
+  // The template to display files available for download
+  script#template-download(type='text/x-tmpl').
+    {% for (var i=0, file; file=o.files[i]; i++) { %}
+      <div class="template-download col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
+        <div class="media">
+          <div class="media__inner">
+            <div class="media__cover">
+              {% if (file.thumbnailUrl) { %}
+                <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}"><img src="{%=file.thumbnailUrl%}"></a>
+              {% } %}
+            </div>
+            
+            {% if (file.deleteUrl) { %}
+              <div class="media__action js-remove-media">
+                <button class="delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                  <span>Удалить</span><i class="icon icon-close-white"></i>
+                </button>
+                <input type="checkbox" name="delete" value="1" class="toggle">
+              </div>
+            {% } %}
+          </div>
+        </div>
+      </div>
+    {% } %}
 
-          img.src = window.URL.createObjectURL(files[i]);
-          photosLink.push(img.src);
-        }
-
-        if (photosLink.length){
-          var photoMedia = _.template($('#photoMedia').html());
-
-          // render the template
-          $('#filePhotosList').html(photoMedia(photosLink));
-        }
-      }
-    }
-
-  script(type="text/html", id="photoMedia")
-    include js/template/mediaPhoto.template
+  // The jQuery UI widget factory, can be omitted if jQuery UI is already included
+  script(src='js/static/vendor/jquery.ui.widget.js')
+  // The Templates plugin is included to render the upload/download listings
+  script(src='//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js')
+  // The Load Image plugin is included for the preview images and image resizing functionality
+  script(src='//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js')
+  // The Canvas to Blob plugin is included for image resizing functionality
+  script(src='//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js')
+  // The Iframe Transport is required for browsers without support for XHR file uploads
+  script(src='js/static/jquery.iframe-transport.js')
+  // The basic File Upload plugin
+  script(src='js/static/jquery.fileupload.js')
+  // The File Upload processing plugin
+  script(src='js/static/jquery.fileupload-process.js')
+  // The File Upload image preview & resize plugin
+  script(src='js/static/jquery.fileupload-image.js')
+  // The File Upload video preview plugin
+  script(src='js/static/jquery.fileupload-video.js')
+  // The File Upload validation plugin
+  script(src='js/static/jquery.fileupload-validate.js')
+  // The File Upload user interface plugin
+  script(src='js/static/jquery.fileupload-ui.js')
+  // The main application script
+  script(src='js/static/main.js')
+  // The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9
+  //if (gte IE 8)&(lt IE 10)
+    script(src='js/static/cors/jquery.xdr-transport.js')

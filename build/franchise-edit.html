@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1516183722713">
+    <link rel="stylesheet" href="css/main.css?v=1516267741955">
   </head>
   <body>
     <header class="header">
@@ -102,10 +102,10 @@
       <div class="section__content">
         <div class="tabs js-tabs">
           <div class="tabs__list">
-            <div class="container"><a class="tabs__list-item js-tabs-item is--active" href="#general">Основное</a><a class="tabs__list-item js-tabs-item" href="#cost">Затраты</a><a class="tabs__list-item js-tabs-item" href="#extra">Дополнительно</a><a class="tabs__list-item js-tabs-item" href="#media">Мультимедиа</a><a class="tabs__list-item js-tabs-item" href="#contacts">Контакты</a></div>
+            <div class="container"><a class="tabs__list-item js-tabs-item" href="#general">Основное</a><a class="tabs__list-item js-tabs-item" href="#cost">Затраты</a><a class="tabs__list-item js-tabs-item" href="#extra">Дополнительно</a><a class="tabs__list-item js-tabs-item is--active" href="#media">Мультимедиа</a><a class="tabs__list-item js-tabs-item" href="#contacts">Контакты</a></div>
           </div>
           <div class="container">
-            <div class="tabs__content is--active js-tabs-content" id="general">
+            <div class="tabs__content js-tabs-content" id="general">
               <form class="form row js-form-franchise-general" action="">
                 <div class="col col--12-of-12 col--s-12-of-12 col--m-12-of-12 col--l-12-of-12">
                   <div class="form__field is--required">
@@ -502,8 +502,8 @@
                 </div>
               </form>
             </div>
-            <div class="tabs__content js-tabs-content" id="media">
-              <form class="form row js-form-franchise-general" action="">
+            <div class="tabs__content js-tabs-content is--active" id="media">
+              <form class="form row js-form-franchise-general" id="fileupload" method="POST" enctype="multipart/form-data">
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12 col--am">
                   <div class="form__upload">
                     <label class="form__upload-img" for="logotip"><img src="images/choose-file.png" alt="" data-upload="logotip"></label>
@@ -521,60 +521,13 @@
                   <hr class="form__divider">
                 </div>
                 <div class="col col--12-of-12 col--s-12-of-12 col--m-12-of-12 col--l-12-of-12">
-                  <div class="is--text-lg is--mb-20 js-photos-qty">
-                     Фотографии (<span>19</span>)</div>
+                  <div class="is--text-lg is--mb-20">
+                     Фотографии (<span class="js-photos-qty">19</span>)</div>
                   <!-- media-->
                   <div class="row" id="filePhotosList">
-                    <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
-                      <div class="media">
-                        <div class="media__inner">
-                          <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
-                      <div class="media">
-                        <div class="media__inner">
-                          <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
-                      <div class="media">
-                        <div class="media__inner">
-                          <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
-                      <div class="media">
-                        <div class="media__inner">
-                          <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
-                      <div class="media">
-                        <div class="media__inner">
-                          <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
-                      <div class="media">
-                        <div class="media__inner">
-                          <div class="media__cover"><img src="images/media.jpg" alt=""></div>
-                          <div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
-                        </div>
-                      </div>
-                    </div>
+                    <!-- The table listing the files available for upload/download-->
+                    <div class="files" role="presentation"></div>
                   </div>
-                  <!-- /media-->
                 </div>
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12">
                   <p><strong>Требования к фотографиям:</strong></p>
@@ -590,9 +543,10 @@
                   <div class="form__field">
                     <p><strong>Загрузить новые фотографии</strong></p>
                     <p>Вы можете разместить еще 21 фото. Файлы, загруженные сверх лимита, будут удалены автоматически.</p>
-                    <div class="form__upload">
+                    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload-->
+                    <div class="fileupload-buttonbar form__upload">
                       <label class="form__upload-img" for="photos"><img src="images/choose-file.png" alt="" data-upload="photos"></label>
-                      <input class="form__upload-file js-media-file" id="photos" type="file" name="photos" multiple accept="image/*" onchange="handleFiles(this.files)">
+                      <input class="form__upload-file js-media-file" type="file" name="files[]" multiple="" id="photos">
                     </div>
                     <p>
                       <label class="link" for="photos">Выбрать файл</label>
@@ -953,46 +907,96 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1516183722717"></script>
-    <script src="js/main.js?v=1516183722717"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-    <script>
-      //
-      // Обработка элемента формы input[type=file].js-media-file
-      // =================================================================
-      window.URL = window.URL || window.webkitURL;
-      
-      var photosLink = [];
-      function handleFiles(files) {
-        photosLink = [];
-        if (files.length) {
-          for (var i = 0; i < files.length; i++) {
-            var img = document.createElement('img');
-      
-            img.src = window.URL.createObjectURL(files[i]);
-            photosLink.push(img.src);
-          }
-      
-          if (photosLink.length){
-            var photoMedia = _.template($('#photoMedia').html());
-      
-            // render the template
-            $('#filePhotosList').html(photoMedia(photosLink));
-          }
-        }
-      }
+    <script src="js/vendor.js?v=1516267741964"></script>
+    <script src="js/main.js?v=1516267741964"></script>
+    <!-- Bootstrap Progressbar styles-->
+    <link rel="stylesheet" href="css/static/bootstrap-progressbar.css">
+    <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars-->
+    <link rel="stylesheet" href="css/static/jquery.fileupload.css">
+    <link rel="stylesheet" href="css/static/jquery.fileupload-ui.css">
+    <!-- The template to display files available for upload-->
+    <script id="template-upload" type="text/x-tmpl">
+      {% for (var i=0, file; file=o.files[i]; i++) { %}
+        <div class="template-upload col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
+          <div class="media">
+            <div class="media__inner">
+              <div class="media__cover">
+                <span class="preview"></span>
+              </div>
+              
+              <div class="media__action">
+                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+                <div>
+                  {% if (!i && !o.options.autoUpload) { %}
+                    <button class="start" disabled>
+                      <span>Загрузить</span><i class="fa fa-download"></i>
+                    </button>
+                  {% } %}
+                  {% if (!i) { %}
+                    <button class="cancel">
+                      <span>Удалить</span><i class="icon icon-close-white"></i>
+                    </button>
+                  {% } %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% } %}
       
     </script>
-    <script type="text/html" id="photoMedia"><% _.forEach(photosLink, function(photoLink) { %>
-	<div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
-		<div class="media">
-			<div class="media__inner">
-				<div class="media__cover"><img src="<%- photoLink %>" alt=""/></div>
-				<div class="media__action js-remove-media"><span>Удалить</span><i class="icon icon-close-white"></i></div>
-			</div>
-		</div>
-	</div>
-<% }); %>
+    <!-- The template to display files available for download-->
+    <script id="template-download" type="text/x-tmpl">
+      {% for (var i=0, file; file=o.files[i]; i++) { %}
+        <div class="template-download col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
+          <div class="media">
+            <div class="media__inner">
+              <div class="media__cover">
+                {% if (file.thumbnailUrl) { %}
+                  <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}"><img src="{%=file.thumbnailUrl%}"></a>
+                {% } %}
+              </div>
+              
+              {% if (file.deleteUrl) { %}
+                <div class="media__action js-remove-media">
+                  <button class="delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                    <span>Удалить</span><i class="icon icon-close-white"></i>
+                  </button>
+                  <input type="checkbox" name="delete" value="1" class="toggle">
+                </div>
+              {% } %}
+            </div>
+          </div>
+        </div>
+      {% } %}
+      
     </script>
+    <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included-->
+    <script src="js/static/vendor/jquery.ui.widget.js"></script>
+    <!-- The Templates plugin is included to render the upload/download listings-->
+    <script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+    <!-- The Load Image plugin is included for the preview images and image resizing functionality-->
+    <script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+    <!-- The Canvas to Blob plugin is included for image resizing functionality-->
+    <script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+    <!-- The Iframe Transport is required for browsers without support for XHR file uploads-->
+    <script src="js/static/jquery.iframe-transport.js"></script>
+    <!-- The basic File Upload plugin-->
+    <script src="js/static/jquery.fileupload.js"></script>
+    <!-- The File Upload processing plugin-->
+    <script src="js/static/jquery.fileupload-process.js"></script>
+    <!-- The File Upload image preview & resize plugin-->
+    <script src="js/static/jquery.fileupload-image.js"></script>
+    <!-- The File Upload video preview plugin-->
+    <script src="js/static/jquery.fileupload-video.js"></script>
+    <!-- The File Upload validation plugin-->
+    <script src="js/static/jquery.fileupload-validate.js"></script>
+    <!-- The File Upload user interface plugin-->
+    <script src="js/static/jquery.fileupload-ui.js"></script>
+    <!-- The main application script-->
+    <script src="js/static/main.js"></script>
+    <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9-->
+    <!--if (gte IE 8)&(lt IE 10)script(src='js/static/cors/jquery.xdr-transport.js')
+    -->
   </body>
 </html>
