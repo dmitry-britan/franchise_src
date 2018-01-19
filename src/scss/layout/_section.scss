@@ -32,6 +32,9 @@
 	margin: 42px 0 12px;
 	border: none;
 	background-color: #dedede;
+	&.is--invert{
+		margin: 25px 0 50px;
+	}
 }
 .section__action{
 	padding-top: 30px;

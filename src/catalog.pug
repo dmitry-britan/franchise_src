@@ -11,6 +11,32 @@ block content
     .container
       h2.section__title.is--align-left Каталог франшиз
       .section__content
+        form(action="").form.row
+          .col.col--11-of-12.col--s-12-of-12.col--m-10-of-12.col--l-11-of-12.col--am
+            .sort__items.row
+              .sort__item.col.col--4-of-12.col--s-12-of-12.col--m-4-of-12
+                .form__field.form__field--select
+                  select(name="investments").select
+                    option(value="1") Размер инвестиций
+                    option(value="2") Размер инвестиций 1
+                    option(value="3") Размер инвестиций 2
+              .sort__item.col.col--4-of-12.col--s-12-of-12.col--m-4-of-12
+                .form__field.form__field--select
+                  select(name="region").select
+                    option(value="1") Выбрать регион
+                    option(value="2") Выбрать регион 1
+                    option(value="3") Выбрать регион 2
+              .sort__item.col.col--4-of-12.col--s-12-of-12.col--m-4-of-12
+                .form__field.form__field--select
+                  select(name="sort_by").select
+                    option(value="1") Сортировать по
+                    option(value="2") Сортировать по 2
+                    option(value="3") Сортировать по 3
+          .col.col--1-of-12.col--s-12-of-12.col--m-2-of-12.col--l-1-of-12.col--am
+            .sort__action
+              button(type="submit").btn.btn--primary Искать 
+        hr.section__divider.is--invert
+
         .row
           each i in [1,2,3,4,5,6,7,8,9,10,11,12]
             .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
