@@ -24,8 +24,37 @@ function _classCallCheck(instance, Constructor) {
 }
 
 //
+// Tabs
+//---------------------------------------------------------------------------------------
+if ($('.js-tabs').length) {
+	var $tabs = $('.js-tabs-item');
+	var $panes = $('.js-tabs-content');
+
+	$tabs.on('click', function(event) {
+		event.preventDefault();
+
+		var id = $(event.currentTarget).attr('href');
+
+		$tabs.removeClass('is--active');
+		$(event.currentTarget).addClass('is--active');
+
+		$panes.removeClass('is--active');
+		$(id).addClass('is--active');
+	});
+}
+
+function showOnHover(element, selectors) {
+	$(element).hover(function() {
+		$(this).find(selectors).stop().slideDown(300);
+	}, function() {
+		$(this).find(selectors).stop().slideUp(300);
+	});
+}
+
+//
 // CLASS - Slider
 // =================================================================
+
 var Slider = function() {
 	function Slider(selector, options) {
 		_classCallCheck(this, Slider);
@@ -98,26 +127,6 @@ if ($('.js-thumbs-slider').length) {
 		adaptiveHeight: true,
 		nextArrow: $('.js-thumbs-slider-next'),
 		prevArrow: $('.js-thumbs-slider-prev')
-	});
-}
-
-//
-// Tabs
-//---------------------------------------------------------------------------------------
-if ($('.js-tabs').length) {
-	var $tabs = $('.js-tabs-item');
-	var $panes = $('.js-tabs-content');
-
-	$tabs.on('click', function(event) {
-		event.preventDefault();
-
-		var id = $(event.currentTarget).attr('href');
-
-		$tabs.removeClass('is--active');
-		$(event.currentTarget).addClass('is--active');
-
-		$panes.removeClass('is--active');
-		$(id).addClass('is--active');
 	});
 }
 
@@ -459,6 +468,8 @@ var validateFormProfileData = {
 // ProfileData Form
 $('.js-form-profile-data').validate(validateFormProfileData);
 
+$('.search-franchise').find('.search-franchise__text, .search-franchise__action').hide();
+showOnHover('.search-franchise', '.search-franchise__text, .search-franchise__action');
 //
 // Подключаем fancybox для фото товара
 //---------------------------------------------------------------------------------------

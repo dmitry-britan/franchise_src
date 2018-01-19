@@ -1,0 +1,42 @@
+extends pug/base
+
+append vars
+  - html.classList.push('page--searh')
+
+block content
+  - var breadcrumbs = ["Главная","Ищу франшизу"];
+  include pug/parts/breadcrumbs
+
+  section.section.section--search-franchise
+    .container
+      h2.section__title.is--align-left Ищу франшизу
+      .section__content
+        p.section__text.is--small Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же новая модель организационной деятельности требуют от нас анализа новых предложений. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации новых предложений. Равным образом дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке дальнейших направлений развития.
+        .row
+          .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
+            .search-franchise
+              .search-franchise__inner.is--first
+                h3.search-franchise__title Бесплатное членство
+                p.search-franchise__text Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач
+                .search-franchise__action
+                  a(href="") Регистрации
+          .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
+            .search-franchise
+              .search-franchise__inner.is--second
+                h3.search-franchise__title Платное членство
+                p.search-franchise__text Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.
+                .search-franchise__action
+                  a(href="") Регистрации
+          .col.col--4-of-12.col--s-12-of-12.col--m-6-of-12.col--l-4-of-12
+            .search-franchise
+              .search-franchise__inner.is--third
+                h3.search-franchise__title Дополнительные услуги
+                p.search-franchise__text Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.
+                .search-franchise__action
+                  a(href="") Регистрации
+
+  include pug/section/advantage
+  include pug/section/news
+
+
+block body-end

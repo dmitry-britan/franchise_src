@@ -1,0 +1,42 @@
+.search-franchise{}
+.search-franchise__inner{
+	padding: 50px 28px 30px;
+	background-color: #9424e3;
+	&.is--first{
+		background: #9424e3 url('../images/sf_1.png') right top no-repeat;
+	}
+	&.is--second{
+		background: #9424e3 url('../images/sf_2.png') left bottom no-repeat;
+	}
+	&.is--third{
+		background: #9424e3 url('../images/sf_3.png') right bottom no-repeat;
+	}
+}
+.search-franchise__title{
+	margin: 0 0 20px;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	color: #ffffff;
+}
+.search-franchise__text{
+	margin: 0 0 30px;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: 400;
+	color: #ffffff;
+	text-align: center;
+}
+.search-franchise__action {
+	margin: 0 0 20px;
+	text-align: center;
+	a{
+		font-size: 12px;
+		line-height: 14px;
+		text-decoration: underline;
+		text-align: center;
+		color: #ffffff;
+	}
+}

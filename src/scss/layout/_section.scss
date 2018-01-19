@@ -25,6 +25,11 @@
 		font-weight: 700;
 		color: #9424e3;
 	}
+	&.is--small{
+		font-size: 12px;
+		line-height: 16px;
+		color: #505050;
+	}
 }
 .section__divider{
 	height: 1px;
@@ -84,4 +89,7 @@
 }
 .section--profile{
 	padding: 40px 0;
+}
+.section--search-franchise{
+	padding-bottom: 220px;
 }
