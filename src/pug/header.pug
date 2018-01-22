@@ -2,6 +2,37 @@ header.header
 	.header__top
 		.container
 			.header__logo
+				.header__login.is--mobile-only
+					- if ( isLogged == 'profile' ) {
+							.login.is--logged
+								a(href="").login__item Профиль
+								ul.login__profile
+									-var items = ["Членство","Моя страница (ID 29579)","Мои сообщения","Моя франшиза","Продлить франшизу","Популярность франшиз","Избранные франшизы","Выйти"];
+									-var links = ["membership.html","profile-data.html","profile-messages.html","profile-franchise.html","profile-payments.html","","profile-favorites.html",""]
+									each item, i in items
+										li.login__profile-item
+											a(href=links[i]).login__profile-link= item
+					- } else if ( isLogged == 'customer' ) {
+							.login.is--logged
+								a(href="").login__item Профиль
+								ul.login__profile
+									-var items = ["Членство","Моя страница (ID 68239)","Мои сообщения","Избранные франшизы","Выйти"];
+									-var links = ["membership.html","profile-data.html","profile-messages.html","profile-favorites.html",""]
+									each item, i in items
+										li.login__profile-item
+											a(href=links[i]).login__profile-link= item
+					- } else {
+							.login
+								i.icon.icon-login
+								a(href="profile-data.html").login__item Войти
+								a(href="", data-modal="registration").login__item Регистрация
+					- }
+				.header__langs.is--mobile-only
+					.langs
+						.langs__current Рус
+						.langs__list
+							span.langs__item Рус
+							a(href="").langs__item Укр
 				a(href="index.html").logo
 					img(src="images/logo.png", alt="")
 			.header__search
@@ -49,6 +80,7 @@ header.header
 						a(href="", data-modal="callback").contact-us__link Заказать обратный звонок
 	.header__bottom
 		.container
+			include ../pug/parts/mobile-nav
 			nav.nav
 				ul.nav__list
 					li.nav__item
@@ -107,3 +139,9 @@ header.header
 						a(href="articles.html").nav__link Третейский суд
 					li.nav__item
 						a(href="contacts.html").nav__link Контакты
+			
+			.search.search--mobile
+				form(action="").search__form
+					input(type="text", placeholder="Поиск франшизы").search__input
+					button(type="submit").search__submit
+						i.icon-search

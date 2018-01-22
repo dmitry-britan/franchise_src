@@ -4,6 +4,10 @@
 	line-height: 21px;
 	text-transform: uppercase;
 	@include clearfix();
+	@include media('<992px'){
+		font-size: 16px;
+		line-height: 20px;
+	}
 }
 .customer-data__text{
 	float: left;
@@ -14,5 +18,7 @@
 }
 .customer-data__action{
 	float: right;
-
+	@include media('<992px'){
+		display: none;
+	}
 }

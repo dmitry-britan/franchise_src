@@ -24,6 +24,12 @@
 		border-bottom-color: #ffffff;
 		color: #000000;
 	}
+	@include media('<992px'){
+		float: none;
+		display: block;
+		border: 1px solid #dfdfdf;
+		border-width: 1px 1px 0;
+	}
 }
 .tabs__content{
 	display: none;

@@ -1,4 +1,8 @@
-.social-icons{}
+.social-icons{
+	@include media('<920px'){
+		padding-top: 20px;
+	}
+}
 .social-icons__link{
 	display: inline-block;
 	margin-right: 8px;

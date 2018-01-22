@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1516395248503">
+    <link rel="stylesheet" href="css/main.css?v=1516656255388">
   </head>
   <body>
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <div class="header__logo"><a class="logo" href="index.html"><img src="images/logo.png" alt=""></a></div>
+          <div class="header__logo">
+            <div class="header__login is--mobile-only">
+              <div class="login"><i class="icon icon-login"></i><a class="login__item" href="profile-data.html">Войти</a><a class="login__item" href="" data-modal="registration">Регистрация</a></div>
+            </div>
+            <div class="header__langs is--mobile-only">
+              <div class="langs">
+                <div class="langs__current">Рус</div>
+                <div class="langs__list"><span class="langs__item">Рус</span><a class="langs__item" href="">Укр</a></div>
+              </div>
+            </div><a class="logo" href="index.html"><img src="images/logo.png" alt=""></a>
+          </div>
           <div class="header__search">
             <div class="search">
               <form class="search__form" action="">
@@ -42,6 +52,46 @@
       </div>
       <div class="header__bottom">
         <div class="container">
+          <div class="mobile-nav__toggle-wrapper">
+            <div class="js-nav-toggle mobile-nav__toggle"><span class="icon-nav">toggle menu</span></div>
+          </div>
+          <!-- MENU-->
+          <nav class="mobile-nav">
+            <div class="mobile-nav__inner">
+              <div class="mobile-nav__block">
+                <ul class="mobile-nav__list">
+                  <li class="mobile-nav__item"><a class="mobile-nav__link" href="">Об ассоциации</a></li>
+                  <li class="mobile-nav__item"><a class="mobile-nav__link" href="">Развиваю франшизу</a></li>
+                  <li class="mobile-nav__item"><a class="mobile-nav__link" href="">Ищу франшизу</a></li>
+                  <li class="mobile-nav__item is--active"><a class="mobile-nav__link" href="">Каталог франшиз</a>
+                    <ul class="mobile-nav__sublist">
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Авто</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Гостиницы</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Здоровье и красота</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">ИТ и интернет</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Кафе и рестораны</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Недорогие франшизы</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Обучение и образование</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Одежда и обувь</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Отдых и развлечения</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Питание</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Производство</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Розничная торговля</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">СМИ</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Строительство и ремонт</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Транспортные услуги</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Улуги для бизнеса</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Услуги для детей</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Услуги для населения</a></li>
+                      <li class="mobile-nav__sublist-item"><a class="mobile-nav__sublist-link" href="">Финансовые услуги</a></li>
+                    </ul>
+                  </li>
+                  <li class="mobile-nav__item"><a class="mobile-nav__link" href="">Третейский суд</a></li>
+                  <li class="mobile-nav__item"><a class="mobile-nav__link" href="">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item"><a class="nav__link" href="about.html">Об ассоциации</a></li>
@@ -80,6 +130,12 @@
               <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
             </ul>
           </nav>
+          <div class="search search--mobile">
+            <form class="search__form" action="">
+              <input class="search__input" type="text" placeholder="Поиск франшизы">
+              <button class="search__submit" type="submit"><i class="icon-search"></i></button>
+            </form>
+          </div>
         </div>
       </div>
     </header>
@@ -327,7 +383,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1516395248506"></script>
-    <script src="js/main.js?v=1516395248506"></script>
+    <script src="js/vendor.js?v=1516656255390"></script>
+    <script src="js/main.js?v=1516656255390"></script>
   </body>
 </html>

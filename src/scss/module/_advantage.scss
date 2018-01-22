@@ -1,6 +1,10 @@
 .advantage{
 	float: left;
 	width: percentage(1/3);
+	@include media('<950px'){
+		width: 100%;
+		margin-bottom: 45px;
+	}
 }
 .advantage__inner{
 	max-width: 280px;

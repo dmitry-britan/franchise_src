@@ -80,12 +80,8 @@ textarea {
 
 .form {
 	position: relative;
-	width: 100%;
 	margin: 0 auto;
 	z-index: 10;
-	@include note {
-		width: 100%;
-	}
 }
 
 .form__inner {

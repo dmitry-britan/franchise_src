@@ -3,27 +3,57 @@
 	// background: url('../images/header-bg-left.png') left top no-repeat, url('../images/header-bg-right.png') right top no-repeat, url('../images/header-bg-top.png') center top no-repeat;
 	background: url('../images/header-bg.png') center top no-repeat;
 	background-size: cover;
+	@include media('<920px') {
+		background-size: inherit;
+	}
+	.is--mobile-only {
+		display: none;
+		@include media('<=920px') {
+			display: inline-block;
+			margin-bottom: 15px;
+		}
+	}
 }
 .header__top{
 	padding-top: 12px;
 	padding-bottom: 33px;
-	// background-color: hsla(0,0%,87%,.4);
+	@include media('<=920px') {
+		padding: 10px 0;
+	} 
 }
 .header__bottom{
-	// background-color: hsla(0,0%,87%,.4);
+	position: relative;
+	@include media('<=920px') {
+		padding: 20px 0 40px;
+	}
 }
 .header__logo{
 	padding-top: 20px;
 	float: left;
+	@include media('<920px') {
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	} 
 }
 .header__search{
 	padding-top: 25px;
 	padding-left: 7.9%;
 	float: left;
+	@include media('<992px'){
+		padding-left: 20px;
+	}
+	@include media('<920px') {
+		display: none;
+	} 
 }
 .header__action{
 	float: right;
 	text-align: right;
+	@include media('<920px') {
+		float: none;
+		text-align: center;
+	} 
 }
 .header__contacts{}
 .header__login,
@@ -31,8 +61,13 @@
 	display: inline-block;
 }
 .header__langs{
-	
+	@include media('<920px') {
+		display: none;
+	} 
 }
 .header__login{
 	margin-right: 10px;
+	@include media('<920px') {
+		display: none;
+	} 
 }

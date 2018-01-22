@@ -1,10 +1,26 @@
-.search{}
+.search{
+	&.search--mobile{
+		display: none;
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+		width: 100%;
+		padding: 10px 15px 0 90px;
+		@include media('<920px'){
+			display: block;
+		}
+	}
+}
 .search__form{
 	position: relative;
 	width: 296px;
 	height: 44px;
 	margin-bottom: 7px;
 	background-color: #ffffff;
+	.search--mobile & {
+		width: 100%;
+	}
 }
 .search__input{
 	position: absolute;

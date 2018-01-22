@@ -1,4 +1,8 @@
-.nav{}
+.nav{
+	@include media('<920px'){
+		display: none;
+	}
+}
 .nav__list{
 	position: relative;
 	@include clearfix();
