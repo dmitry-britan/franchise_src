@@ -103,7 +103,7 @@ body.is--mobile-active{}
   padding: 80px 0 0;
   visibility: hidden;
   transition: opacity .35s, visibility .35s;
-  background-color: #9424e3;
+  background: #9424e3 url('../images/menu-bg.png') right bottom no-repeat;
   overflow-y: auto;
   z-index: 500;
   

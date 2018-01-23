@@ -1,4 +1,8 @@
-.function{}
+.function{
+	@include media('<768px'){
+		margin: 15px auto;
+	}
+}
 .function__inner{
 	max-width: 300px;
 	margin: 0 auto;
