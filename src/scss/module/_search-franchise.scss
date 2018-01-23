@@ -1,4 +1,8 @@
-.search-franchise{}
+.search-franchise{
+	@include media('<992px'){
+		margin-bottom: 30px;
+	}
+}
 .search-franchise__inner{
 	padding: 50px 28px 30px;
 	background-color: #9424e3;
