@@ -126,7 +126,26 @@ if ($('.js-thumbs-slider').length) {
 		//autoplay: true,
 		adaptiveHeight: true,
 		nextArrow: $('.js-thumbs-slider-next'),
-		prevArrow: $('.js-thumbs-slider-prev')
+		prevArrow: $('.js-thumbs-slider-prev'),
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				vertical: false,
+				slidesToShow: 3
+			}
+		}, {
+			breakpoint: 600,
+			settings: {
+				vertical: false,
+				slidesToShow: 2
+			}
+		}, {
+			breakpoint: 480,
+			settings: {
+				vertical: false,
+				slidesToShow: 1
+			}
+		}]
 	});
 }
 
