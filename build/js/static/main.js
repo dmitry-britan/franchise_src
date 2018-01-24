@@ -13,6 +13,15 @@
 
 $(function () {
     'use strict';
+    var $photosTotalEl = $('.js-photos-qty');
+    var photosTotalQty = getTotalPhotosQty($photosTotalEl);
+
+    function getTotalPhotosQty(el){
+        return parseInt(el.text());
+    }
+    function setTotalPhotosQty(el, value){
+        el.text(value);
+    }
 
     // Initialize the jQuery File Upload widget:
     $('#fileupload').fileupload({
@@ -35,7 +44,15 @@ $(function () {
             '/cors/result.html?%s'
         )
     );
-
+    
+    $('#fileupload').bind('fileuploaddone', function (e, data) {
+        photosTotalQty++;
+        setTotalPhotosQty($photosTotalEl, photosTotalQty);
+    });
+    $('#fileupload').bind('fileuploaddestroyed', function (e, data){
+        photosTotalQty--;
+        setTotalPhotosQty($photosTotalEl, photosTotalQty);
+    });
     // Load existing files:
     $('#fileupload').addClass('fileupload-processing');
     $.ajax({
