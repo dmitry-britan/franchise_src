@@ -6,13 +6,7 @@
 }
 .message__inner{
 	display: table-row;
-}
-.message__avatar{
-	display: table-cell;
-	width: 105px;
-	padding-bottom: 35px;
-	vertical-align: top;
-	img{
+	@include media('<500px'){
 		display: block;
 	}
 }
@@ -21,6 +15,11 @@
 	padding-left: 25px;
 	padding-bottom: 35px;
 	vertical-align: top;
+	@include media('<500px'){
+		display: block;
+		max-width: 320px;
+		margin: 0 auto;
+	}
 }
 .message__details,
 .message__text,
@@ -28,10 +27,24 @@
 	margin: 0 0 6px;
 }
 .message__author{
+	display: table-cell;
+	min-width: 115px;
+	vertical-align: top;
 	margin-right: 8px;
 	font-size: 18px;
 	font-weight: 400;
 	color: $color__primary;
+	@include media('<500px'){
+		display: block;
+		max-width: 150px;
+		margin: 0 auto 15px;
+	}
+	img{
+		display: block;
+		@include media('<500px'){
+			margin: 0 auto;
+		}
+	}
 }
 .message__date{
 	font-size: 12px;
@@ -55,4 +68,7 @@
 	color: #9424e3;
 	font-weight: 700;
 	text-decoration: none;
+	@include media('<500px'){
+		display: block;
+	}
 }
