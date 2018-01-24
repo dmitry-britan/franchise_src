@@ -11,6 +11,11 @@
 			color: #fff;
 			text-decoration: none;
 			background-color: #9424e3;
+			@include media('<920px'){
+				color: $color__primary;
+				background-color: transparent;
+				text-decoration: underline;
+			}
 		}
 		&:hover .login__profile{
 			visibility: visible;

@@ -23,6 +23,18 @@
 	background-color: #ffffff;
 	&.is--wide{
 		width: 960px;
+		@include media('<992px'){
+			width: 540px;
+			padding: 55px 35px 35px;
+		}
+		@include media('<600px'){
+			width: 440px;
+			padding: 55px 35px 35px;
+		}
+		@include media('<480px'){
+			width: 280px;
+			padding: 55px 25px 25px;
+		}
 	}
 	@include media('<600px'){
 		width: 440px;
