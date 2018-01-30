@@ -92,7 +92,21 @@ header.header
 					li.nav__item
 						a(href="catalog.html").nav__link Каталог франшиз
 						//- submenu
-						.nav__submenu
+						.nav__submenu.is--active.js--submenu-branches
+							ul.nav__submenu-list
+								li.nav__submenu-item
+									a(href="catalog.html").nav__submenu-link Популярные
+								li.nav__submenu-item
+									a(href="catalog.html").nav__submenu-link Новые
+								li.nav__submenu-item
+									a(href="catalog.html").nav__submenu-link Недорогие
+								li.nav__submenu-item
+									a(href="catalog.html").nav__submenu-link.js--submenu-toggler По сферам деятельности
+						//- submenu
+						.nav__submenu.is--fullwide.js--submenu-categories
+							a(href="").nav__submenu-backlink.js--submenu-toggler
+								i.fa.fa-long-arrow-left
+								|  Назад
 							ul.nav__submenu-list
 								li.nav__submenu-item
 									a(href="catalog.html").nav__submenu-link Авто

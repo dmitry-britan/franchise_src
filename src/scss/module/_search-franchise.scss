@@ -1,20 +1,9 @@
 .search-franchise{
-	@include media('<992px'){
-		margin-bottom: 30px;
-	}
+	margin-bottom: 30px;
 }
 .search-franchise__inner{
-	padding: 50px 28px 30px;
-	background-color: #9424e3;
-	&.is--first{
-		background: #9424e3 url('../images/sf_1.png') right top no-repeat;
-	}
-	&.is--second{
-		background: #9424e3 url('../images/sf_2.png') left bottom no-repeat;
-	}
-	&.is--third{
-		background: #9424e3 url('../images/sf_3.png') right bottom no-repeat;
-	}
+	padding: 50px 28px 15px;
+	border: 2px solid #9424e3;
 }
 .search-franchise__title{
 	margin: 0 0 20px;
@@ -22,25 +11,61 @@
 	line-height: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
-	text-align: center;
-	color: #ffffff;
+	color: #000;
 }
 .search-franchise__text{
 	margin: 0 0 30px;
 	font-size: 12px;
 	line-height: 14px;
 	font-weight: 400;
-	color: #ffffff;
-	text-align: center;
+	color: #000;
 }
 .search-franchise__action {
 	margin: 0 0 20px;
-	text-align: center;
 	a{
+		margin: 0 15px 15px 0;
 		font-size: 12px;
 		line-height: 14px;
-		text-decoration: underline;
 		text-align: center;
-		color: #ffffff;
+		color: #000;
 	}
+}
+
+.search-franchise__service{
+	display: table;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.search-franchise__service-item{
+	display: table-row;
+}
+.search-franchise__service-item-title{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 8px 10px;
+	font-size: 16px;
+	line-height: 20px;
+	border-bottom: 1px solid #f3f3f3;
+}
+.search-franchise__service-item-price{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 8px 0;
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	border-bottom: 1px solid #f3f3f3;
+}
+.search-franchise__service-item-comment{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 8px 0 8px 50px;
+	border-bottom: 1px solid #f3f3f3;
+}
+.search-franchise__service-item-action{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 8px 10px;
+	border-bottom: 1px solid #f3f3f3;
+	text-align: right;
 }

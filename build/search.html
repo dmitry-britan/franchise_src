@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1516806506035">
+    <link rel="stylesheet" href="css/main.css?v=1517323733646">
   </head>
   <body>
     <header class="header">
@@ -98,7 +98,15 @@
               <li class="nav__item"><a class="nav__link" href="">Развиваю франшизу</a></li>
               <li class="nav__item"><a class="nav__link" href="">Ищу франшизу</a></li>
               <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог франшиз</a>
-                <div class="nav__submenu">
+                <div class="nav__submenu is--active js--submenu-branches">
+                  <ul class="nav__submenu-list">
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="catalog.html">Популярные</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="catalog.html">Новые</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link" href="catalog.html">Недорогие</a></li>
+                    <li class="nav__submenu-item"><a class="nav__submenu-link js--submenu-toggler" href="catalog.html">По сферам деятельности</a></li>
+                  </ul>
+                </div>
+                <div class="nav__submenu is--fullwide js--submenu-categories"><a class="nav__submenu-backlink js--submenu-toggler" href=""><i class="fa fa-long-arrow-left"></i> Назад</a>
                   <ul class="nav__submenu-list">
                     <li class="nav__submenu-item"><a class="nav__submenu-link" href="catalog.html">Авто</a></li>
                     <li class="nav__submenu-item"><a class="nav__submenu-link" href="catalog.html">Гостиницы</a></li>
@@ -149,30 +157,72 @@
         <div class="section__content">
           <p class="section__text is--small">Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же новая модель организационной деятельности требуют от нас анализа новых предложений. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации новых предложений. Равным образом дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке дальнейших направлений развития.</p>
           <div class="row">
-            <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
+            <div class="col col--12-of-12 col--s-12-of-12 col--m-6-of-12 col--l-12-of-12">
               <div class="search-franchise">
                 <div class="search-franchise__inner is--first">
                   <h3 class="search-franchise__title">Бесплатное членство</h3>
                   <p class="search-franchise__text">Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач</p>
-                  <div class="search-franchise__action"><a href="">Регистрации</a></div>
+                  <div class="search-franchise__action"><a class="btn btn--primary" href="">Регистрации</a></div>
                 </div>
               </div>
             </div>
-            <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
+            <div class="col col--12-of-12 col--s-12-of-12 col--m-6-of-12 col--l-12-of-12">
               <div class="search-franchise">
                 <div class="search-franchise__inner is--second">
                   <h3 class="search-franchise__title">Платное членство</h3>
                   <p class="search-franchise__text">Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.</p>
-                  <div class="search-franchise__action"><a href="">Регистрации</a></div>
+                  <div class="search-franchise__action"><a class="btn btn--primary" href="">Регистрации</a><a class="btn btn--primary" href="">Оплатить</a></div>
                 </div>
               </div>
             </div>
-            <div class="col col--4-of-12 col--s-12-of-12 col--m-6-of-12 col--l-4-of-12">
+            <div class="col col--12-of-12 col--s-12-of-12 col--m-6-of-12 col--l-12-of-12">
               <div class="search-franchise">
                 <div class="search-franchise__inner is--third">
                   <h3 class="search-franchise__title">Дополнительные услуги</h3>
                   <p class="search-franchise__text">Значимость этих проблем настолько очевидна, что сложившаяся структура организации способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач.</p>
-                  <div class="search-franchise__action"><a href="">Регистрации</a></div>
+                  <div class="search-franchise__service">
+                    <div class="search-franchise__service-item">
+                      <div class="search-franchise__service-item-title">Название услуги</div>
+                      <div class="search-franchise__service-item-price">1'800 грн.</div>
+                      <div class="search-franchise__service-item-comment">
+                        <textarea class="textarea is--onerow" name="" cols="30" rows="1" placeholder="Ваш комментарий"></textarea>
+                      </div>
+                      <div class="search-franchise__service-item-action"><a class="btn btn--primary" href="">Оплатить</a></div>
+                    </div>
+                    <div class="search-franchise__service-item">
+                      <div class="search-franchise__service-item-title">Название услуги</div>
+                      <div class="search-franchise__service-item-price">1'800 грн.</div>
+                      <div class="search-franchise__service-item-comment">
+                        <textarea class="textarea is--onerow" name="" cols="30" rows="1" placeholder="Ваш комментарий"></textarea>
+                      </div>
+                      <div class="search-franchise__service-item-action"><a class="btn btn--primary" href="">Оплатить</a></div>
+                    </div>
+                    <div class="search-franchise__service-item">
+                      <div class="search-franchise__service-item-title">Название услуги</div>
+                      <div class="search-franchise__service-item-price">1'800 грн.</div>
+                      <div class="search-franchise__service-item-comment">
+                        <textarea class="textarea is--onerow" name="" cols="30" rows="1" placeholder="Ваш комментарий"></textarea>
+                      </div>
+                      <div class="search-franchise__service-item-action"><a class="btn btn--primary" href="">Оплатить</a></div>
+                    </div>
+                    <div class="search-franchise__service-item">
+                      <div class="search-franchise__service-item-title">Название услуги</div>
+                      <div class="search-franchise__service-item-price">1'800 грн.</div>
+                      <div class="search-franchise__service-item-comment">
+                        <textarea class="textarea is--onerow" name="" cols="30" rows="1" placeholder="Ваш комментарий"></textarea>
+                      </div>
+                      <div class="search-franchise__service-item-action"><a class="btn btn--primary" href="">Оплатить</a></div>
+                    </div>
+                    <div class="search-franchise__service-item">
+                      <div class="search-franchise__service-item-title">Название услуги</div>
+                      <div class="search-franchise__service-item-price">1'800 грн.</div>
+                      <div class="search-franchise__service-item-comment">
+                        <textarea class="textarea is--onerow" name="" cols="30" rows="1" placeholder="Ваш комментарий"></textarea>
+                      </div>
+                      <div class="search-franchise__service-item-action"><a class="btn btn--primary" href="">Оплатить</a></div>
+                    </div>
+                  </div>
+                  <div class="search-franchise__action"><a class="btn btn--primary" href="">Регистрации</a></div>
                 </div>
               </div>
             </div>
@@ -383,7 +433,7 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1516806506036"></script>
-    <script src="js/main.js?v=1516806506036"></script>
+    <script src="js/vendor.js?v=1517323733651"></script>
+    <script src="js/main.js?v=1517323733651"></script>
   </body>
 </html>

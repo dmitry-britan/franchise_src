@@ -51,6 +51,11 @@ function showOnHover(element, selectors) {
 	});
 }
 
+$('.js--submenu-toggler').on('click', function(e) {
+	e.preventDefault();
+	$('.js--submenu-branches, .js--submenu-categories').toggleClass('is--active');
+});
+
 //
 // CLASS - Slider
 // =================================================================
@@ -487,8 +492,6 @@ var validateFormProfileData = {
 // ProfileData Form
 $('.js-form-profile-data').validate(validateFormProfileData);
 
-$('.search-franchise').find('.search-franchise__text, .search-franchise__action').hide();
-showOnHover('.search-franchise', '.search-franchise__text, .search-franchise__action');
 //
 // Подключаем fancybox для фото товара
 //---------------------------------------------------------------------------------------

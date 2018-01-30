@@ -29,8 +29,8 @@
 	&:last-child .nav__link{
 		padding-right: 1px;
 	}
-	&:focus .nav__submenu,
-	&:hover .nav__submenu{
+	&:focus .nav__submenu.is--active,
+	&:hover .nav__submenu.is--active{
 		visibility: visible;
 		opacity: 1;
 		z-index: 30;
@@ -59,21 +59,35 @@
 	visibility: hidden;
 	opacity: 0;
 	top: 100%;
-	left: 0; right: 0;
-	margin: 0 auto;
-	padding: 58px 43px 54px;
+	width: 320px;
+	padding: 58px 25px 54px;
 	box-shadow: -1px 6px 7px 1px rgba(0, 0, 0, 0.26);
 	background: #9424e3 url('../images/menu-bg.png') right bottom no-repeat;
   transform: translateY(-8px);
   transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
-  z-index: -1;
+	z-index: -1;
+	&.is--fullwide{
+		margin: 0 auto;
+		padding: 58px 43px 54px;
+		left: 0; right: 0;
+		width: 100%;
+	}
+}
+.nav__submenu-backlink{
+	position: absolute;
+	top: 18px; left: 43px;
+	@extend .nav__submenu-link;
 }
 .nav__submenu-list{
 	display: inline-block;
-	width: percentage(1/3);
+	width: percentage(1/1);
+	padding: 0;
 	margin-right: -.24em;
 	vertical-align: top;
 	list-style: none;
+	.is--fullwide &{
+		width: percentage(1/3);
+	}
 }
 .nav__submenu-item{
 	margin: 0;

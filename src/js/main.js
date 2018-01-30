@@ -4,5 +4,4 @@
 // @include('module/popup.js')
 // @include('module/form-file-upload.js')
 // @include('module/form-validation.js')
-// @include('module/search-franchise.js')
 // @include('module/fancybox.js')
