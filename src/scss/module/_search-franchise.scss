@@ -2,32 +2,47 @@
 	margin-bottom: 30px;
 }
 .search-franchise__inner{
-	padding: 50px 28px 15px;
-	border: 2px solid #9424e3;
+	padding: 50px 20px 15px;
+	background-color: #9424e3;
+	&.is--first{
+		background: #9424e3 url('../images/sf_1.png') right top no-repeat;
+		background-size: cover;
+	}
+	&.is--second{
+		background: #9424e3 url('../images/sf_2.png') left center no-repeat;
+	}
+	&.is--third{
+		background: #9424e3 url('../images/sf_3.png') right bottom no-repeat;
+	}
 }
 .search-franchise__title{
 	margin: 0 0 20px;
 	font-size: 18px;
-	line-height: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
-	color: #000;
+	color: #ffffff;
 }
 .search-franchise__text{
 	margin: 0 0 30px;
 	font-size: 12px;
 	line-height: 14px;
 	font-weight: 400;
-	color: #000;
+	color: #fff;
 }
 .search-franchise__action {
 	margin: 0 0 20px;
-	a{
+	.btn{
 		margin: 0 15px 15px 0;
-		font-size: 12px;
-		line-height: 14px;
+		padding: 7px 20px;
+		border: 1px solid #fff;
+		font-size: 14px;
+		line-height: 20px;
+		text-transform: uppercase;
 		text-align: center;
-		color: #000;
+		color: #fff;
+		&:hover{
+			background-color: darken(#9424e3, 5%);
+		}
 	}
 }
 
@@ -38,34 +53,63 @@
 }
 .search-franchise__service-item{
 	display: table-row;
+	&:last-child{
+		.search-franchise__service-item-title,
+		.search-franchise__service-item-price,
+		.search-franchise__service-item-comment,
+		.search-franchise__service-item-action{
+			border: none;
+		}
+	}
 }
 .search-franchise__service-item-title{
 	display: table-cell;
 	vertical-align: middle;
-	padding: 8px 10px;
-	font-size: 16px;
+	padding: 12px 10px 12px 0;
+	font-size: 18px;
 	line-height: 20px;
-	border-bottom: 1px solid #f3f3f3;
+	border-bottom: 1px solid #fff;
+	color: #fff;
 }
 .search-franchise__service-item-price{
 	display: table-cell;
 	vertical-align: middle;
-	padding: 8px 0;
+	padding: 12px 0;
 	font-size: 18px;
 	line-height: 20px;
 	text-align: center;
-	border-bottom: 1px solid #f3f3f3;
+	border-bottom: 1px solid #fff;
+	color: #fff;
 }
 .search-franchise__service-item-comment{
 	display: table-cell;
 	vertical-align: middle;
-	padding: 8px 0 8px 50px;
-	border-bottom: 1px solid #f3f3f3;
+	padding: 12px 0 12px 50px;
+	border-bottom: 1px solid #fff;
+
+	.textarea{
+		background-color: #9424e3;
+		background-color: transparent;
+		border: 1px solid #fff;
+		color: #fff;
+
+		@include placeholder {
+			color: #fff;
+		}
+	}
 }
 .search-franchise__service-item-action{
 	display: table-cell;
 	vertical-align: middle;
-	padding: 8px 10px;
-	border-bottom: 1px solid #f3f3f3;
+	padding: 12px 0 12px 10px;
+	border-bottom: 1px solid #fff;
 	text-align: right;
+	.btn{
+		padding: 7px 20px;
+		border: 1px solid #fff;
+		color: #fff;
+		&:hover{
+			background-color: darken(#9424e3, 5%);
+		}
+	}
 }
