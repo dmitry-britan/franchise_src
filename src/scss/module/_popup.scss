@@ -21,6 +21,8 @@
 	width: 566px;
 	padding: 55px;
 	background-color: #ffffff;
+	@include clearfix();
+
 	&.is--wide{
 		width: 960px;
 		@include media('<992px'){
@@ -64,3 +66,12 @@
 }
 .popup__body{}
 .popup__footer{}
+.popup__video{
+	float: left;
+	width: 473px;
+}
+.popup__form{
+	float: right;
+	width: 375px;
+	padding-left: 50px;
+}

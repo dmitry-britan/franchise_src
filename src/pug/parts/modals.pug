@@ -46,6 +46,26 @@ div(style='display: none;')
 					.form__action
 						button(type="submit").btn.btn--primary.btn--md Отправить
 						
+	#video.popup
+		.popup__close.arcticmodal-close.js-never-show
+		.popup__inner.is--wide
+			.popup__body
+				.popup__video
+					iframe(width="473" height="273" src="https://www.youtube.com/embed/BUKhyVpL8E0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+				.popup__form
+					form(action="").form.js-form-video
+						.form__field.is--required
+							label.label Ваше имя
+							input(type="text", name="name").input
+						.form__field.is--required
+							label.label Ваш e-mail
+							input(type="email", name="email").input
+						.form__field
+							label.label Ваш телефон
+							input(type="text", name="phone").input
+						.form__action
+							button(type="submit").btn.btn--primary.btn--md Отправить
+						
 	#question.popup
 		.popup__close.arcticmodal-close
 		.popup__inner

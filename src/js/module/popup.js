@@ -18,3 +18,13 @@ $('[data-modal]').on('click', (e) => {
 		$(`#${link}`).arcticmodal();
 	}
 });
+
+$(document).ready(() => {
+	$('.js-never-show').on('click', () => {
+		$.cookie('showVideoPopup', 'false', {expires: 365});
+	});
+
+	if ($.cookie('showVideoPopup') !== 'false') {
+		$('#video').arcticmodal();
+	}
+});

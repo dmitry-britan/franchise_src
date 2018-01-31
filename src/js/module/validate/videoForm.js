@@ -1,7 +1,7 @@
 // 
-// Валидация формы "Быстрая Регистрация"
+// Валидация формы "Форма с видео, cookie popup"
 // =================================================================
-let validateFormRegistration = {
+let videoFormRegistration = {
 	rules: {
 		name: {
 			required: true,
@@ -24,5 +24,5 @@ let validateFormRegistration = {
 	focusInvalid: false,
 };
 
-// REGISTRATION FORM
-$('.js-form-registration').validate(validateFormRegistration);
+// VIDEO FORM
+$('.js-form-video').validate(videoFormRegistration);

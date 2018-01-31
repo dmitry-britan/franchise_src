@@ -4,4 +4,5 @@
 // @include('validate/answerForm.js')
 // @include('validate/callbackForm.js')
 // @include('validate/registrationForm.js')
+// @include('validate/videoForm.js')
 // @include('validate/profileDataForm.js')

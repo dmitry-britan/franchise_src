@@ -241,6 +241,18 @@ $('[data-modal]').on('click', function(e) {
 	}
 });
 
+$(document).ready(function() {
+	$('.js-never-show').on('click', function() {
+		$.cookie('showVideoPopup', 'false', {
+			expires: 365
+		});
+	});
+
+	if ($.cookie('showVideoPopup') !== 'false') {
+		$('#video').arcticmodal();
+	}
+});
+
 //
 // Обработка элемента формы input[type=file]
 // =================================================================
@@ -435,18 +447,41 @@ var validateFormRegistration = {
 			required: 'Введите Ваш e-mail'
 		}
 	},
-	submitHandler: function submitHandler(form) {
-		// ////////////////////
-		//  AJAX CODE GOES HERE
-		// ////////////////////
-		form.reset();
-	},
 	focusCleanup: true,
 	focusInvalid: false
 };
 
 // REGISTRATION FORM
 $('.js-form-registration').validate(validateFormRegistration);
+
+// 
+// Валидация формы "Форма с видео, cookie popup"
+// =================================================================
+var videoFormRegistration = {
+	rules: {
+		name: {
+			required: true
+		},
+		email: {
+			required: true,
+			email: true
+		}
+	},
+	messages: {
+		name: {
+			required: 'Введите Ваше имя'
+		},
+		email: {
+			email: 'Введите корректный e-mail адрес',
+			required: 'Введите Ваш e-mail'
+		}
+	},
+	focusCleanup: true,
+	focusInvalid: false
+};
+
+// VIDEO FORM
+$('.js-form-video').validate(videoFormRegistration);
 
 //
 // Валидация формы "Задать вопрос"
