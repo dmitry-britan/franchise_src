@@ -56,6 +56,18 @@ $('.js--submenu-toggler').on('click', function(e) {
 	$('.js--submenu-branches, .js--submenu-categories').toggleClass('is--active');
 });
 
+var $royaltySelect = $('.js-select-royalty');
+var $royaltyInputs = $('.js-input-royalty');
+var royaltyInputId = 0;
+
+if ($royaltySelect.length) {
+	$royaltySelect.on('change', function(e) {
+		royaltyInputId = $(e.currentTarget).val();
+		$royaltyInputs.addClass('is--hidden');
+		$royaltyInputs.eq(royaltyInputId).toggleClass('is--hidden is--active');
+	});
+}
+
 //
 // CLASS - Slider
 // =================================================================

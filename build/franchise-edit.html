@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1517501351637">
+    <link rel="stylesheet" href="css/main.css?v=1517506131700">
   </head>
   <body>
     <header class="header">
@@ -221,13 +221,7 @@
                 <div class="col col--6-of-12 col--s-12-of-12 col--m-6-of-12 col--l-6-of-12">
                   <div class="form__field form__field--select">
                     <label class="label">Страна происхождения</label>
-                    <select class="select" name="country">
-                      <option value="rus">Россия</option>
-                      <option value="ukr">Украина</option>
-                      <option value="kaz">Казахстан</option>
-                      <option value="blr">Беларусь</option>
-                      <option value="mda">Молдова</option>
-                    </select>
+                    <input class="input" type="text" name="country">
                   </div>
                   <div class="form__field form__field--select">
                     <label class="label">Сфера бизнеса</label>
@@ -372,9 +366,9 @@
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12">
                   <div class="form__field">
                     <label class="label">Вступительный взнос, грн.</label>
-                    <input class="input" type="text" name="fee_min">
+                    <input class="input" type="text" name="fee_min" placeholder="От">
                     <label class="label is--empty"></label>
-                    <input class="input" type="text" name="fee_max">
+                    <input class="input" type="text" name="fee_max" placeholder="До">
                   </div>
                   <div class="form__field">
                     <input class="checkbox is--small" type="checkbox" name="fee" id="fee">
@@ -394,9 +388,9 @@
                   <div class="form__field">
                     <label class="label">Инвестиции, грн.</label>
                     <div class="form__field-desc is--alt">Внимание! Инвестиции не должны включать в себя вступительный взнос, указанный выше</div>
-                    <input class="input" type="text" name="investment_min">
+                    <input class="input" type="text" name="investment_min" placeholder="От">
                     <label class="label is--empty"></label>
-                    <input class="input" type="text" name="investment_max">
+                    <input class="input" type="text" name="investment_max" placeholder="До">
                   </div>
                   <div class="form__field">
                     <input class="checkbox is--small" type="checkbox" name="investment" id="investment">
@@ -419,15 +413,15 @@
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12">
                   <div class="form__field">
                     <label class="label">Окупаемость, месяцев</label>
-                    <input class="input" type="text" name="return_period_min">
+                    <input class="input" type="text" name="return_period_min" placeholder="От">
                     <label class="label is--empty"></label>
-                    <input class="input" type="text" name="return_period_max">
+                    <input class="input" type="text" name="return_period_max" placeholder="До">
                   </div>
                   <div class="form__field">
                     <label class="label">Чистая прибыль в месяц, грн.</label>
-                    <input class="input" type="text" name="return_min">
+                    <input class="input" type="text" name="return_min" placeholder="От">
                     <label class="label is--empty"></label>
-                    <input class="input" type="text" name="return_max">
+                    <input class="input" type="text" name="return_max" placeholder="До">
                   </div>
                 </div>
                 <div class="col col--9-of-12 col--s-12-of-12 col--m-6-of-12 col--l-9-of-12">
@@ -443,15 +437,25 @@
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12">
                   <div class="form__field form__field--select">
                     <label class="label">Роялти</label>
-                    <select class="select" name="royalty">
+                    <select class="select js-select-royalty" name="royalty">
                       <option value="0">Процент</option>
-                      <option value="1">Процент</option>
-                      <option value="2">Процент</option>
+                      <option value="1">Фиксированная сумма</option>
+                      <option value="2">Другое</option>
                     </select>
                   </div>
                   <div class="form__field">
-                    <label class="label">Ставка процента</label>
-                    <input class="input" type="text" name="interest_rate">
+                    <div class="is--active js-input-royalty">
+                      <label class="label">Ставка процента</label>
+                      <input class="input" type="text" name="interest_rate">
+                    </div>
+                    <div class="is--hidden js-input-royalty">
+                      <label class="label">Сумма</label>
+                      <input class="input" type="text" name="interest_sum">
+                    </div>
+                    <div class="is--hidden js-input-royalty">
+                      <label class="label">Другое</label>
+                      <input class="input" type="text" name="interest_other">
+                    </div>
                   </div>
                   <div class="form__field">
                     <label class="label">База для расчета</label>
@@ -460,12 +464,8 @@
                 </div>
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12">
                   <div class="form__field form__field--select">
-                    <label class="label">Периодичность уплаты</label>
-                    <select class="select" name="periodicity_payment">
-                      <option value="0">Раз в месяц</option>
-                      <option value="1">Раз в месяц</option>
-                      <option value="2">Раз в месяц</option>
-                    </select>
+                    <label class="label">Периодичность оплаты</label>
+                    <input class="input" type="text" name="periodicity_payment">
                   </div>
                   <div class="form__field">
                     <label class="label">Рекламные отчисления</label>
@@ -1011,8 +1011,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1517501351641"></script>
-    <script src="js/main.js?v=1517501351641"></script>
+    <script src="js/vendor.js?v=1517506131704"></script>
+    <script src="js/main.js?v=1517506131704"></script>
     <!-- Bootstrap Progressbar styles-->
     <link rel="stylesheet" href="css/static/bootstrap-progressbar.css">
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars-->

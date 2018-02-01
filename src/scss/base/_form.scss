@@ -125,6 +125,14 @@ textarea {
 			z-index: 10;
 		}
 	}
+	.is--hidden{
+		position: absolute;
+		width: 0; height: 0;
+		padding: 0; margin: 0;
+		line-height: 0; font-size: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
 	input,
 	select,
 	textarea {
