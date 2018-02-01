@@ -3,16 +3,16 @@
 }
 .search-franchise__inner{
 	padding: 50px 20px 15px;
-	background-color: #9424e3;
+	background-color: rgba(#9424e3, .09);
 	&.is--first{
-		background: #9424e3 url('../images/sf_1.png') right top no-repeat;
+		background: rgba(#9424e3, .09) url('../images/sf_1.png') right top no-repeat;
 		background-size: cover;
 	}
 	&.is--second{
-		background: #9424e3 url('../images/sf_2.png') left center no-repeat;
+		background: rgba(#9424e3, .09) url('../images/sf_2.png') left center no-repeat;
 	}
 	&.is--third{
-		background: #9424e3 url('../images/sf_3.png') right bottom no-repeat;
+		background: rgba(#9424e3, .09) url('../images/sf_3.png') right bottom no-repeat;
 	}
 }
 .search-franchise__title{
@@ -20,28 +20,29 @@
 	font-size: 18px;
 	font-weight: 400;
 	text-transform: uppercase;
-	color: #ffffff;
+	color: #000;
 }
 .search-franchise__text{
 	margin: 0 0 30px;
 	font-size: 12px;
 	line-height: 14px;
 	font-weight: 400;
-	color: #fff;
+	color: #000;
 }
 .search-franchise__action {
 	margin: 0 0 20px;
 	.btn{
 		margin: 0 15px 15px 0;
 		padding: 7px 20px;
-		border: 1px solid #fff;
+		border: 1px solid $color__primary;
 		font-size: 14px;
 		line-height: 20px;
 		text-transform: uppercase;
 		text-align: center;
-		color: #fff;
+		color: $color__primary;
 		&:hover{
-			background-color: darken(#9424e3, 5%);
+			border: 1px solid $color__secondary;
+			color: $color__secondary;
 		}
 	}
 }
@@ -68,8 +69,8 @@
 	padding: 12px 10px 12px 0;
 	font-size: 18px;
 	line-height: 20px;
-	border-bottom: 1px solid #fff;
-	color: #fff;
+	border-bottom: 1px solid #e0bff7;
+	color: #000;
 }
 .search-franchise__service-item-price{
 	display: table-cell;
@@ -78,23 +79,22 @@
 	font-size: 18px;
 	line-height: 20px;
 	text-align: center;
-	border-bottom: 1px solid #fff;
-	color: #fff;
+	border-bottom: 1px solid #e0bff7;
+	color: #000;
 }
 .search-franchise__service-item-comment{
 	display: table-cell;
 	vertical-align: middle;
 	padding: 12px 0 12px 50px;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #e0bff7;
 
 	.textarea{
-		background-color: #9424e3;
-		background-color: transparent;
-		border: 1px solid #fff;
-		color: #fff;
+		background-color: #fff;
+		border: 1px solid #000;
+		color: #000;
 
 		@include placeholder {
-			color: #fff;
+			color: #000;
 		}
 	}
 }
@@ -102,14 +102,15 @@
 	display: table-cell;
 	vertical-align: middle;
 	padding: 12px 0 12px 10px;
-	border-bottom: 1px solid #fff;
+	border-bottom: 1px solid #e0bff7;
 	text-align: right;
 	.btn{
 		padding: 7px 20px;
-		border: 1px solid #fff;
-		color: #fff;
+		border: 1px solid $color__primary;
+		color: $color__primary;
 		&:hover{
-			background-color: darken(#9424e3, 5%);
+			border: 1px solid $color__secondary;
+			color: $color__secondary;
 		}
 	}
 }
