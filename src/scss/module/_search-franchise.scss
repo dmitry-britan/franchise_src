@@ -51,9 +51,22 @@
 	display: table;
 	width: 100%;
 	margin-bottom: 20px;
+	@include media('<860px'){
+		display: flex;
+		flex-flow: row wrap;
+	}
+	@include media('<640px'){
+		flex-flow: column;
+	}
 }
 .search-franchise__service-item{
 	display: table-row;
+	@include media('<860px'){
+		width: 50%;
+	}
+	@include media('<640px'){
+		width: 100%;
+	}
 	&:last-child{
 		.search-franchise__service-item-title,
 		.search-franchise__service-item-price,
@@ -65,28 +78,47 @@
 }
 .search-franchise__service-item-title{
 	display: table-cell;
+	width: 260px;
 	vertical-align: middle;
 	padding: 12px 10px 12px 0;
 	font-size: 18px;
 	line-height: 20px;
 	border-bottom: 1px solid #e0bff7;
 	color: #000;
+	@include media('<860px'){
+		display: block;
+		width: 100%;
+		border: none;
+	}
 }
 .search-franchise__service-item-price{
 	display: table-cell;
 	vertical-align: middle;
+	width: 100px;
 	padding: 12px 0;
 	font-size: 18px;
 	line-height: 20px;
 	text-align: center;
 	border-bottom: 1px solid #e0bff7;
 	color: #000;
+	@include media('<860px'){
+		display: block;
+		width: 100%;
+		text-align: left;
+		border: none;
+	}
 }
 .search-franchise__service-item-comment{
 	display: table-cell;
 	vertical-align: middle;
 	padding: 12px 0 12px 50px;
 	border-bottom: 1px solid #e0bff7;
+	@include media('<860px'){
+		display: block;
+		width: 100%;
+		padding-left: 0;
+		border: none;
+	}
 
 	.textarea{
 		background-color: #fff;
@@ -104,6 +136,12 @@
 	padding: 12px 0 12px 10px;
 	border-bottom: 1px solid #e0bff7;
 	text-align: right;
+	@include media('<860px'){
+		display: block;
+		width: 100%;
+		text-align: left;
+		padding-left: 0;
+	}
 	.btn{
 		padding: 7px 20px;
 		border: 1px solid $color__primary;

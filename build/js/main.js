@@ -68,6 +68,18 @@ if ($royaltySelect.length) {
 	});
 }
 
+var $advertisingSelect = $('.js-select-advertising');
+var $advertisingInputs = $('.js-input-advertising');
+var advertisingInputId = 0;
+
+if ($advertisingSelect.length) {
+	$advertisingSelect.on('change', function(e) {
+		advertisingInputId = $(e.currentTarget).val();
+		$advertisingInputs.addClass('is--hidden');
+		$advertisingInputs.eq(advertisingInputId).toggleClass('is--hidden is--active');
+	});
+}
+
 //
 // CLASS - Slider
 // =================================================================
@@ -252,19 +264,6 @@ $('[data-modal]').on('click', function(e) {
 		$('#' + link).arcticmodal();
 	}
 });
-
-$(document).ready(function() {
-	$('.js-never-show').on('click', function() {
-		$.cookie('showVideoPopup', 'false', {
-			expires: 365
-		});
-	});
-
-	if ($.cookie('showVideoPopup') !== 'false') {
-		$('#video').arcticmodal();
-	}
-});
-
 //
 // Обработка элемента формы input[type=file]
 // =================================================================

@@ -77,30 +77,55 @@ form(action="").form.row.js-form-franchise-cost
 		.form__field.form__field--select
 			label.label Роялти
 			select(name="royalty").select.js-select-royalty
-				option(value="0") Процент
+				option(value="0") Процент от оборота
 				option(value="1") Фиксированная сумма
 				option(value="2") Другое
 		.form__field
 			.is--active.js-input-royalty
 				label.label Ставка процента
-				input(type="text", name="interest_rate").input
+				input(type="text", name="royalty_interest_rate").input
 			.is--hidden.js-input-royalty
 				label.label Сумма
-				input(type="text", name="interest_sum").input
+				input(type="text", name="royalty_interest_sum").input
 			.is--hidden.js-input-royalty
 				label.label Другое
-				input(type="text", name="interest_other").input
-		.form__field
-			label.label База для расчета
-			input(type="text", name="calculation").input
+				input(type="text", name="royalty_interest_other").input
+		.form__field.form__field--select
+			label.label Периодичность оплаты
+			select(name="royalty_periodicity_payment").select
+				option(value="0") Раз в месяц
+				option(value="1") Раз в квартал
+				option(value="2") Раз в полугодие
+				option(value="3") Раз в год
+				option(value="4") Другое
 
 	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
 		.form__field.form__field--select
-			label.label Периодичность оплаты
-			input(type="text", name="periodicity_payment").input
-		.form__field
 			label.label Рекламные отчисления
-			input(type="text", name="advertising_charges", placeholder="Отсутствуют").input
+			select(name="advertising_charges").select.js-select-advertising
+				option(value="0") Процент от оборота
+				option(value="1") Фиксированная сумма
+				option(value="2") Другое
+
+		.form__field
+			.is--active.js-input-advertising
+				label.label Ставка процента
+				input(type="text", name="advertising_interest_rate").input
+			.is--hidden.js-input-advertising
+				label.label Сумма
+				input(type="text", name="advertising_interest_sum").input
+			.is--hidden.js-input-advertising
+				label.label Другое
+				input(type="text", name="advertising_interest_other").input
+
+		.form__field.form__field--select
+			label.label Периодичность оплаты
+			select(name="advertising_periodicity_payment").select
+				option(value="0") Раз в месяц
+				option(value="1") Раз в квартал
+				option(value="2") Раз в полугодие
+				option(value="3") Раз в год
+				option(value="4") Другое
 
 	.col.col--6-of-12.col--s-12-of-12.col--m-12-of-12.col--l-6-of-12
 		.form__field

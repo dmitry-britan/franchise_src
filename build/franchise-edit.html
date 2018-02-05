@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1517506131700">
+    <link rel="stylesheet" href="css/main.css?v=1517841681833">
   </head>
   <body>
     <header class="header">
@@ -438,7 +438,7 @@
                   <div class="form__field form__field--select">
                     <label class="label">Роялти</label>
                     <select class="select js-select-royalty" name="royalty">
-                      <option value="0">Процент</option>
+                      <option value="0">Процент от оборота</option>
                       <option value="1">Фиксированная сумма</option>
                       <option value="2">Другое</option>
                     </select>
@@ -446,30 +446,60 @@
                   <div class="form__field">
                     <div class="is--active js-input-royalty">
                       <label class="label">Ставка процента</label>
-                      <input class="input" type="text" name="interest_rate">
+                      <input class="input" type="text" name="royalty_interest_rate">
                     </div>
                     <div class="is--hidden js-input-royalty">
                       <label class="label">Сумма</label>
-                      <input class="input" type="text" name="interest_sum">
+                      <input class="input" type="text" name="royalty_interest_sum">
                     </div>
                     <div class="is--hidden js-input-royalty">
                       <label class="label">Другое</label>
-                      <input class="input" type="text" name="interest_other">
+                      <input class="input" type="text" name="royalty_interest_other">
                     </div>
                   </div>
-                  <div class="form__field">
-                    <label class="label">База для расчета</label>
-                    <input class="input" type="text" name="calculation">
+                  <div class="form__field form__field--select">
+                    <label class="label">Периодичность оплаты</label>
+                    <select class="select" name="royalty_periodicity_payment">
+                      <option value="0">Раз в месяц</option>
+                      <option value="1">Раз в квартал</option>
+                      <option value="2">Раз в полугодие</option>
+                      <option value="3">Раз в год</option>
+                      <option value="4">Другое</option>
+                    </select>
                   </div>
                 </div>
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12">
                   <div class="form__field form__field--select">
-                    <label class="label">Периодичность оплаты</label>
-                    <input class="input" type="text" name="periodicity_payment">
+                    <label class="label">Рекламные отчисления</label>
+                    <select class="select js-select-advertising" name="advertising_charges">
+                      <option value="0">Процент от оборота</option>
+                      <option value="1">Фиксированная сумма</option>
+                      <option value="2">Другое</option>
+                    </select>
                   </div>
                   <div class="form__field">
-                    <label class="label">Рекламные отчисления</label>
-                    <input class="input" type="text" name="advertising_charges" placeholder="Отсутствуют">
+                    <div class="is--active js-input-advertising">
+                      <label class="label">Ставка процента</label>
+                      <input class="input" type="text" name="advertising_interest_rate">
+                    </div>
+                    <div class="is--hidden js-input-advertising">
+                      <label class="label">Сумма</label>
+                      <input class="input" type="text" name="advertising_interest_sum">
+                    </div>
+                    <div class="is--hidden js-input-advertising">
+                      <label class="label">Другое</label>
+                      <input class="input" type="text" name="advertising_interest_other">
+                    </div>
+                  </div>
+                  <div class="form__field form__field--select">
+                    <label class="label">Периодичность оплаты</label>
+                    <select class="select" name="advertising_periodicity_payment">
+                      <option value="0">Раз в месяц</option>
+                      <option value="1">Раз в квартал</option>
+                      <option value="2">Раз в полугодие</option>
+                      <option value="3">Раз в год</option>
+                      <option value="4">Другое</option>
+                    </select>
                   </div>
                 </div>
                 <div class="col col--6-of-12 col--s-12-of-12 col--m-12-of-12 col--l-6-of-12">
@@ -864,7 +894,7 @@
       </div>
     </footer>
     <!-- /FOOTER-->
-    <div style="display: none;">
+    <div class="js-all-modals" style="display: none;">
       <div class="popup" id="registration">
         <div class="popup__close arcticmodal-close"></div>
         <div class="popup__inner">
@@ -1011,8 +1041,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1517506131704"></script>
-    <script src="js/main.js?v=1517506131704"></script>
+    <script src="js/vendor.js?v=1517841681837"></script>
+    <script src="js/main.js?v=1517841681837"></script>
     <!-- Bootstrap Progressbar styles-->
     <link rel="stylesheet" href="css/static/bootstrap-progressbar.css">
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars-->
