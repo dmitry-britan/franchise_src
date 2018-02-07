@@ -19,12 +19,14 @@
 	line-height: 20px;
 	font-weight: 400;
 	color: #ccc;
-	text-align: center;
 	&:hover,
 	&:focus{
 		border-radius: 0;
 		border: none;
 		outline: none;
+	}
+	@include media('<940px'){
+		text-align: center;
 	}
 }
 .subscribe__submit{

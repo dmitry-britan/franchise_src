@@ -14,7 +14,7 @@
 	line-height: 16px;
 	font-weight: 400;
 	color: #000;
-	@include media('<920px'){
+	@include media('<940px'){
 		display: none;
 	}
 }

@@ -2,7 +2,7 @@
 	@include clearfix();
 	padding: 70px 0;
 	background: url('../images/stripe.png') 0 0 repeat;
-	@include media('<920px'){
+	@include media('<940px'){
 		text-align: center;
 	}
 }
@@ -13,21 +13,29 @@
 	img{
 		max-width: 100%;
 	}
-	@include media('<920px'){
+	@include media('<940px'){
 		float: none;
 		width: 100%;
 		padding: 0;
 		margin-bottom: 30px;
 		text-align: center;
+
+		.logo img {
+			margin: 0 auto 10px;
+		}
 	}
 }
 .footer__menu{
 	float: left;
-	max-width: percentage(270/1000);
+	max-width: 270px;
 	padding-left: 31px;
 	padding-right: 16px;
 	margin-bottom: 45px;
-	@include media('<920px'){
+	&+.footer__menu{
+		width: 160px;
+		padding-left: 30px;
+	}
+	@include media('<940px'){
 		float: none;
 		display: inline-block;
 		vertical-align: top;
@@ -49,13 +57,13 @@
 	}
 }
 .footer__subscribe{
-	float: left;
+	float: right;
 	min-width: 30%;
 	padding-left: 30px;
 	@include media('<1040px'){
 		min-width: 25%;
 	}
-	@include media('<920px'){
+	@include media('<940px'){
 		clear: both;
 		float: none;
 		min-width: 280px;
