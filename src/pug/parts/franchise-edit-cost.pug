@@ -2,17 +2,18 @@ form(action="").form.row.js-form-franchise-cost
 	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
 		.form__field.form__field--select
 			label.label Выберите валюту
-			select(name="currency").select
-				option(value="uah") Гривны
-				option(value="rub") Рубли
-				option(value="usd") Доллары
+			select(name="currency").select.js-select-currency
+				option(value="uah", data-currency="грн.") Гривны
+				option(value="rub", data-currency="руб.") Рубли
+				option(value="usd", data-currency="$") Доллары
 	
 	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
 		hr.form__divider
 
 	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
 			.form__field
-				label.label Вступительный взнос, грн.
+				label.label Вступительный взнос, 
+					span.js-input-currency грн.
 				input(type="text", name="fee_min", placeholder="От").input
 				label.label.is--empty
 				input(type="text", name="fee_max", placeholder="До").input
@@ -21,7 +22,7 @@ form(action="").form.row.js-form-franchise-cost
 				label(for="fee") Вступительный взнос отсутствует
 	.col.col--9-of-12.col--s-12-of-12.col--m-6-of-12.col--l-9-of-12
 		.form__field
-			label.label Вступительный взнос, грн.
+			label.label Что входит во вступительный взнос?
 			textarea(name="fee_desc", cols="30", rows="10").textarea
 	
 	.col.col--12-of-12.col--s-12-of-12.col--m-12-of-12.col--l-12-of-12
@@ -29,7 +30,8 @@ form(action="").form.row.js-form-franchise-cost
 
 	.col.col--3-of-12.col--s-12-of-12.col--m-6-of-12.col--l-3-of-12
 			.form__field
-				label.label Инвестиции, грн.
+				label.label Инвестиции, 
+					span.js-input-currency грн.
 				.form__field-desc.is--alt Внимание! Инвестиции не должны включать в себя вступительный взнос, указанный выше
 				input(type="text", name="investment_min", placeholder="От").input
 				label.label.is--empty
@@ -59,7 +61,8 @@ form(action="").form.row.js-form-franchise-cost
 				label.label.is--empty
 				input(type="text", name="return_period_max", placeholder="До").input
 			.form__field
-				label.label Чистая прибыль в месяц, грн.
+				label.label Чистая прибыль в месяц, 
+					span.js-input-currency грн.
 				input(type="text", name="return_min", placeholder="От").input
 				label.label.is--empty
 				input(type="text", name="return_max", placeholder="До").input

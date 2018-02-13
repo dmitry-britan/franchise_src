@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1518007581074">
+    <link rel="stylesheet" href="css/main.css?v=1518516139661">
   </head>
   <body>
     <header class="header">
@@ -353,10 +353,10 @@
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12">
                   <div class="form__field form__field--select">
                     <label class="label">Выберите валюту</label>
-                    <select class="select" name="currency">
-                      <option value="uah">Гривны</option>
-                      <option value="rub">Рубли</option>
-                      <option value="usd">Доллары</option>
+                    <select class="select js-select-currency" name="currency">
+                      <option value="uah" data-currency="грн.">Гривны</option>
+                      <option value="rub" data-currency="руб.">Рубли</option>
+                      <option value="usd" data-currency="$">Доллары</option>
                     </select>
                   </div>
                 </div>
@@ -365,7 +365,7 @@
                 </div>
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12">
                   <div class="form__field">
-                    <label class="label">Вступительный взнос, грн.</label>
+                    <label class="label">Вступительный взнос, <span class="js-input-currency">грн.</span></label>
                     <input class="input" type="text" name="fee_min" placeholder="От">
                     <label class="label is--empty"></label>
                     <input class="input" type="text" name="fee_max" placeholder="До">
@@ -377,7 +377,7 @@
                 </div>
                 <div class="col col--9-of-12 col--s-12-of-12 col--m-6-of-12 col--l-9-of-12">
                   <div class="form__field">
-                    <label class="label">Вступительный взнос, грн.</label>
+                    <label class="label">Что входит во вступительный взнос?</label>
                     <textarea class="textarea" name="fee_desc" cols="30" rows="10"></textarea>
                   </div>
                 </div>
@@ -386,7 +386,7 @@
                 </div>
                 <div class="col col--3-of-12 col--s-12-of-12 col--m-6-of-12 col--l-3-of-12">
                   <div class="form__field">
-                    <label class="label">Инвестиции, грн.</label>
+                    <label class="label">Инвестиции, <span class="js-input-currency">грн.</span></label>
                     <div class="form__field-desc is--alt">Внимание! Инвестиции не должны включать в себя вступительный взнос, указанный выше</div>
                     <input class="input" type="text" name="investment_min" placeholder="От">
                     <label class="label is--empty"></label>
@@ -418,7 +418,7 @@
                     <input class="input" type="text" name="return_period_max" placeholder="До">
                   </div>
                   <div class="form__field">
-                    <label class="label">Чистая прибыль в месяц, грн.</label>
+                    <label class="label">Чистая прибыль в месяц, <span class="js-input-currency">грн.</span></label>
                     <input class="input" type="text" name="return_min" placeholder="От">
                     <label class="label is--empty"></label>
                     <input class="input" type="text" name="return_max" placeholder="До">
@@ -1041,8 +1041,8 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1518007581078"></script>
-    <script src="js/main.js?v=1518007581078"></script>
+    <script src="js/vendor.js?v=1518516139666"></script>
+    <script src="js/main.js?v=1518516139666"></script>
     <!-- Bootstrap Progressbar styles-->
     <link rel="stylesheet" href="css/static/bootstrap-progressbar.css">
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars-->

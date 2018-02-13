@@ -80,6 +80,17 @@ if ($advertisingSelect.length) {
 	});
 }
 
+var $currencySelect = $('.js-select-currency');
+var $currencyInputs = $('.js-input-currency');
+
+if ($currencySelect.length) {
+	$currencySelect.on('change', function(e) {
+		var currency = $(e.currentTarget).find('option:selected').data('currency');
+
+		$currencyInputs.text(currency);
+	});
+}
+
 //
 // CLASS - Slider
 // =================================================================
