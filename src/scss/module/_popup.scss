@@ -69,9 +69,22 @@
 .popup__video{
 	float: left;
 	width: 473px;
+	iframe{
+		max-width: 100%;
+	}
+	@include media('<992px'){
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+	}
 }
 .popup__form{
 	float: right;
 	width: 375px;
 	padding-left: 50px;
+	@include media('<992px'){
+		float: none;
+		width: 100%;
+		padding-left: 0;
+	}
 }
