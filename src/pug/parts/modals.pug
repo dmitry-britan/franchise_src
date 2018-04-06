@@ -46,6 +46,24 @@ div(style='display: none;' class="js-all-modals")
 					.form__action
 						button(type="submit").btn.btn--primary.btn--md Отправить
 						
+	#welcome.popup
+		.popup__close.arcticmodal-close
+		.popup__inner.is--centered.is--wide
+			h4.popup__header 
+				span Доброе пожаловать!
+				span Пожалуйста, представьтесь:
+			.popup__body
+				.row
+					.col.col--4-of-12.col--s-12-of-12.col--m-4-of-12
+						p
+							a(href="").btn.btn--primary.btn--md Продавец франшизы
+					.col.col--4-of-12.col--s-12-of-12.col--m-4-of-12
+						p
+							a(href="").btn.btn--primary.btn--md Покупатель франшизы
+					.col.col--4-of-12.col--s-12-of-12.col--m-4-of-12
+						p
+							a(href="").btn.btn--primary.btn--md Просто так зашел
+						
 	#video.popup
 		.popup__close.arcticmodal-close.js-never-show
 		.popup__inner.is--wide
@@ -53,6 +71,15 @@ div(style='display: none;' class="js-all-modals")
 				.popup__video
 					iframe(width="473" height="273" src="https://www.youtube.com/embed/BUKhyVpL8E0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
 				.popup__form
+					.form.js-form-terms
+						.form__field
+							input#terms.checkbox.is--small(type='checkbox', name='terms')
+							label(for='terms')
+								| Принимаю 
+								a(href="") условия пользовательского соглашения
+						.form__action
+							button(type="submit").btn.btn--primary.btn--md Получить
+
 					form(action="").form.js-form-video
 						.form__field.is--required
 							label.label Ваше имя
@@ -109,3 +136,19 @@ div(style='display: none;' class="js-all-modals")
 						input(type="password", name="password").input
 					.form__action
 						button(type="submit").btn.btn--primary.btn--md Отправить
+
+// Скрипт для примера, после своей реализации этот - удалить! :)
+script.
+	var termsForm = document.querySelector('.js-form-terms');
+	var videoForms = document.querySelector('.js-form-video');
+	var termsFormSubmit = document.querySelector('.js-form-terms .btn');
+
+	videoForms.style.display = "none";
+	termsFormSubmit.addEventListener('click', function(event) {
+		event.defaultPrevented;
+
+		if (terms.checked){
+			termsForm.style.display = 'none';
+			videoForms.style.display = 'block';
+		}
+	});

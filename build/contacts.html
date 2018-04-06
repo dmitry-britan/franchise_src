@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1521455970453">
+    <link rel="stylesheet" href="css/main.css?v=1523031293958">
   </head>
   <body>
     <header class="header">
@@ -322,6 +322,25 @@
           </div>
         </div>
       </div>
+      <div class="popup" id="welcome">
+        <div class="popup__close arcticmodal-close"></div>
+        <div class="popup__inner is--centered is--wide">
+          <h4 class="popup__header"> <span>Доброе пожаловать!</span><span>Пожалуйста, представьтесь:</span></h4>
+          <div class="popup__body">
+            <div class="row">
+              <div class="col col--4-of-12 col--s-12-of-12 col--m-4-of-12">
+                <p><a class="btn btn--primary btn--md" href="">Продавец франшизы</a></p>
+              </div>
+              <div class="col col--4-of-12 col--s-12-of-12 col--m-4-of-12">
+                <p><a class="btn btn--primary btn--md" href="">Покупатель франшизы</a></p>
+              </div>
+              <div class="col col--4-of-12 col--s-12-of-12 col--m-4-of-12">
+                <p><a class="btn btn--primary btn--md" href="">Просто так зашел</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="popup" id="video">
         <div class="popup__close arcticmodal-close js-never-show"></div>
         <div class="popup__inner is--wide">
@@ -330,6 +349,15 @@
               <iframe width="473" height="273" src="https://www.youtube.com/embed/BUKhyVpL8E0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
             <div class="popup__form">
+              <div class="form js-form-terms">
+                <div class="form__field">
+                  <input class="checkbox is--small" id="terms" type="checkbox" name="terms">
+                  <label for="terms">Принимаю <a href="">условия пользовательского соглашения</a></label>
+                </div>
+                <div class="form__action">
+                  <button class="btn btn--primary btn--md" type="submit">Получить</button>
+                </div>
+              </div>
               <form class="form js-form-video" action="">
                 <div class="form__field is--required">
                   <label class="label">Ваше имя</label>
@@ -412,7 +440,23 @@
         </div>
       </div>
     </div>
-    <script src="js/vendor.js?v=1521455970455"></script>
-    <script src="js/main.js?v=1521455970455"></script>
+    <!-- Скрипт для примера, после своей реализации этот - удалить! :)-->
+    <script>
+      var termsForm = document.querySelector('.js-form-terms');
+      var videoForms = document.querySelector('.js-form-video');
+      var termsFormSubmit = document.querySelector('.js-form-terms .btn');
+      
+      videoForms.style.display = "none";
+      termsFormSubmit.addEventListener('click', function(event) {
+      	event.defaultPrevented;
+      
+      	if (terms.checked){
+      		termsForm.style.display = 'none';
+      		videoForms.style.display = 'block';
+      	}
+      });
+    </script>
+    <script src="js/vendor.js?v=1523031293961"></script>
+    <script src="js/main.js?v=1523031293961"></script>
   </body>
 </html>
